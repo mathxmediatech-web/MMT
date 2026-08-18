@@ -5,9 +5,9 @@
   "scripts": {
     "predev": "node scripts/clean-dist.mjs .next",
     "dev": "next dev",
-    "prebuild": "node scripts/clean-dist.mjs .next-build",
-    "build": "set NEXT_DIST_DIR=.next-build&& next build",
-    "start": "set NEXT_DIST_DIR=.next-build&& next start",
+    "prebuild": "node scripts/clean-dist.mjs .next",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
