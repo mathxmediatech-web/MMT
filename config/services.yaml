@@ -1,0 +1,303 @@
+services:
+  section_badge: "Comprehensive Capabilities"
+  section_title: "End-to-End Technology & Growth Services"
+  section_description: "We bridge the gap between creative marketing, modern software engineering, and operational automation to build scalable engines for your business."
+  
+  categories:
+    - id: "digital-marketing"
+      name: "Digital Marketing & Growth"
+      tagline: "High-ROAS customer acquisition and organic brand supremacy"
+      icon: "TrendingUp"
+      color: "sky"
+    - id: "software-development"
+      name: "Software & Web Engineering"
+      tagline: "Custom web apps, mobile solutions, SaaS platforms, and enterprise portals"
+      icon: "Code2"
+      color: "indigo"
+    - id: "business-automation"
+      name: "Business Systems & Automation"
+      tagline: "Custom ERP/CRM, intelligent workflows, and automated internal tools"
+      icon: "Cpu"
+      color: "cyan"
+
+  items:
+    # DIGITAL MARKETING
+    - id: "meta-ads-instagram"
+      slug: "meta-instagram-ads"
+      category_id: "digital-marketing"
+      title: "Meta & Instagram Advertising"
+      short_description: "Data-backed paid ad campaigns engineered to generate qualified inbound leads, sales pipeline, and maximize ROAS."
+      icon: "Share2"
+      featured: true
+      badge: "High ROI"
+      full_description: "Our Meta and Instagram advertising team crafts conversion-focused creative assets, audience segmentations, dynamic retargeting funnels, and pixel telemetry that turns ad spend into consistent, profitable customer acquisition."
+      features:
+        - "Hyper-targeted B2B & B2C audience lookalikes"
+        - "High-converting video and carousel creatives"
+        - "CBO/ABO budget pacing and bid optimization"
+        - "Instant lead forms & landing page integration"
+        - "Deep funnel remarketing and retention campaigns"
+      benefits:
+        - "Lower cost per acquisition (CPA)"
+        - "Predictable daily stream of qualified leads"
+        - "Clear, verifiable ROAS dashboards"
+      technologies:
+        - "Meta Ads Manager"
+        - "Facebook Pixel & CAPI"
+        - "Zapier / Webhooks"
+        - "Google Analytics 4"
+      process:
+        - "Audience & Competitor Audit"
+        - "Creative & Copy Asset Production"
+        - "Funnel Architecture & Pixel Setup"
+        - "A/B Testing & Rapid Iteration"
+        - "Scaling Profitable Campaigns"
+
+    - id: "google-ads-search"
+      slug: "google-ads-ppc"
+      category_id: "digital-marketing"
+      title: "Google Ads & Search PPC"
+      short_description: "Capture high-intent buyers at the exact moment they search for your products or professional services."
+      icon: "Search"
+      featured: true
+      badge: "High Intent"
+      full_description: "We deploy precision Google Search, Performance Max, Display, and YouTube campaigns that capture bottom-of-funnel search intent, guaranteeing your business appears in front of active buyers."
+      features:
+        - "Negative keyword scrubbing & intent filtering"
+        - "Performance Max and Search campaign structures"
+        - "Quality score enhancement & bid strategy"
+        - "Conversion tracking with server-side GTM"
+        - "Landing page speed & CRO alignment"
+      benefits:
+        - "Instant visibility on competitive keywords"
+        - "Higher conversion rates from commercial intent"
+        - "Elimination of wasted ad budget"
+      technologies:
+        - "Google Ads Platform"
+        - "Google Tag Manager"
+        - "Google Search Console"
+        - "Looker Studio"
+      process:
+        - "Keyword Discovery & Intent Mapping"
+        - "Ad Copywriting & Asset Extensions"
+        - "Conversion Action Configuration"
+        - "Bid Strategy Deployment"
+        - "Search Term Optimization"
+
+    - id: "lead-generation-seo"
+      slug: "lead-generation-seo"
+      category_id: "digital-marketing"
+      title: "SEO & Lead Generation Systems"
+      short_description: "Organic search domination, technical SEO audits, and automated lead capture funnels."
+      icon: "Target"
+      featured: false
+      badge: "Long-term Value"
+      full_description: "We engineer organic search engines that establish sustainable domain authority, rank for competitive industry keywords, and convert passive organic visitors into booked consultations."
+      features:
+        - "Comprehensive technical and on-page SEO audits"
+        - "High-authority editorial link building"
+        - "Keyword-focused content clusters"
+        - "Schema markup and structured data"
+        - "Conversion-optimized lead capture forms"
+      benefits:
+        - "Zero cost-per-click inbound traffic"
+        - "Permanent organic footprint in search engines"
+        - "Sustainable pipeline of enterprise leads"
+      technologies:
+        - "Ahrefs & SEMrush"
+        - "Google Search Console"
+        - "Schema.org"
+        - "Lighthouse & Core Web Vitals"
+      process:
+        - "Technical Health & Keyword Audit"
+        - "On-Page Structural Fixes"
+        - "Content Strategy & Deployment"
+        - "Authority Outreach"
+        - "Ranking & Traffic Reporting"
+
+    - id: "google-business-profile"
+      slug: "google-business-profile"
+      category_id: "digital-marketing"
+      title: "Google Business & Local SEO"
+      short_description: "Dominate Google Maps, 3-pack local search, and convert nearby customers into calls and visits."
+      icon: "MapPin"
+      featured: false
+      badge: "Local Reach"
+      full_description: "Complete Google Business Profile setup, weekly geo-tagged updates, review generation workflows, and citation management to make your business the top-ranked local option."
+      features:
+        - "Google 3-pack optimization"
+        - "Review generation automation"
+        - "Local citation & NAP synchronization"
+        - "Geo-targeted updates and photo uploads"
+      benefits:
+        - "Massive increase in local inbound calls"
+        - "Enhanced trust via Google verified reviews"
+        - "Local market leadership"
+      technologies:
+        - "Google Business Platform"
+        - "Local Falcon"
+        - "BrightLocal"
+      process:
+        - "Listing Audit & Verification"
+        - "Category & Service Optimization"
+        - "Citation Building"
+        - "Review Workflow Integration"
+
+    # SOFTWARE DEVELOPMENT
+    - id: "web-application-development"
+      slug: "web-application-development"
+      category_id: "software-development"
+      title: "Custom Web Application Development"
+      short_description: "High-performance, secure, and scalable web apps built with modern React, Next.js, and Node architectures."
+      icon: "Globe"
+      featured: true
+      badge: "Core Engineering"
+      full_description: "From client portals and multi-tenant platforms to high-traffic SaaS products, we design and build full-stack web applications that handle complex business logic seamlessly with blazing speed."
+      features:
+        - "Modular Next.js / React frontend architectures"
+        - "REST & GraphQL API design with Node.js/Python"
+        - "Secure role-based authentication (RBAC)"
+        - "Cloud database modeling (PostgreSQL, MongoDB)"
+        - "Automated CI/CD pipelines & automated testing"
+      benefits:
+        - "Lightning-fast load times and smooth UX"
+        - "Effortless scaling as user base multiplies"
+        - "Enterprise-grade data security"
+      technologies:
+        - "Next.js"
+        - "React"
+        - "Node.js"
+        - "PostgreSQL"
+        - "Tailwind CSS"
+        - "Docker"
+      process:
+        - "Architecture & Wireframing"
+        - "Database Schema & API Design"
+        - "UI Component Engineering"
+        - "Security & Performance Hardening"
+        - "Cloud Deployment"
+
+    - id: "saas-product-development"
+      slug: "saas-product-development"
+      category_id: "software-development"
+      title: "SaaS Product Engineering"
+      short_description: "Turn product visions into multi-tenant, subscription-ready SaaS software with billing and analytics."
+      icon: "Layers"
+      featured: true
+      badge: "SaaS"
+      full_description: "We partner with visionary founders and established brands to build market-ready SaaS applications complete with tenant isolation, Stripe recurring billing, team permissions, and usage dashboards."
+      features:
+        - "Multi-tenant database architectures"
+        - "Stripe subscription & meter-based billing"
+        - "Interactive admin & customer dashboards"
+        - "Webhook triggers & 3rd party integrations"
+        - "Enterprise SSO and audit logging"
+      benefits:
+        - "Rapid time-to-market with MVP frameworks"
+        - "Automated recurring revenue infrastructure"
+        - "Built-in analytics for user retention"
+      technologies:
+        - "React / Next.js"
+        - "Node.js / Express"
+        - "Stripe API"
+        - "Supabase / PostgreSQL"
+        - "AWS / Vercel"
+      process:
+        - "Product Scoping & Roadmapping"
+        - "Multi-tenant Architecture Design"
+        - "Billing & Auth Integration"
+        - "Beta Deployment & User Testing"
+        - "Production Launch & Scale"
+
+    - id: "mobile-app-development"
+      slug: "mobile-app-development"
+      category_id: "software-development"
+      title: "Mobile Application Development"
+      short_description: "Cross-platform iOS and Android mobile apps with fluid animations and offline-first data sync."
+      icon: "Smartphone"
+      featured: false
+      badge: "iOS & Android"
+      full_description: "We build native-feeling cross-platform mobile apps using React Native and Flutter, providing smooth 60fps animations, push notifications, offline storage, and seamless app store submission."
+      features:
+        - "Cross-platform codebase (iOS & Android)"
+        - "Native hardware access (Camera, GPS, Biometrics)"
+        - "Push notification pipelines (FCM/APNS)"
+        - "Offline storage and data synchronization"
+        - "App Store and Play Store compliance"
+      benefits:
+        - "50% faster delivery via unified codebase"
+        - "Direct engagement via mobile push alerts"
+        - "High app store review ratings"
+      technologies:
+        - "React Native"
+        - "Flutter"
+        - "Firebase"
+        - "Node.js API"
+      process:
+        - "Mobile UX/UI Design"
+        - "Core Logic & API Sync"
+        - "Device Testing & QA"
+        - "Store Submission & Approvals"
+
+    - id: "website-development"
+      slug: "website-development"
+      category_id: "software-development"
+      title: "High-Conversion Website Development"
+      short_description: "Ultra-fast, responsive corporate websites, landing pages, and ecommerce platforms designed to convert."
+      icon: "Layout"
+      featured: false
+      badge: "High Velocity"
+      full_description: "We create bespoke corporate websites with immersive visuals, lightning-quick load times, and dynamic CMS/YAML configuration so marketing teams can update content effortlessly."
+      features:
+        - "Responsive across all desktop & mobile screen sizes"
+        - "Configurable content engines (Zero code edits)"
+        - "Lighthouse 95+ performance scores"
+        - "Integrated analytics and lead capture"
+      benefits:
+        - "Instant credibility for brand stakeholders"
+        - "Higher conversion rates on traffic"
+        - "Zero ongoing developer dependency for content"
+      technologies:
+        - "Next.js"
+        - "Tailwind CSS"
+        - "YAML Config"
+        - "Framer Motion"
+      process:
+        - "Design Mockups & Prototyping"
+        - "Component Development"
+        - "Config Engine Binding"
+        - "Speed Optimization"
+        - "Live Deployment"
+
+    # BUSINESS MANAGEMENT & AUTOMATION
+    - id: "business-automation-workflows"
+      slug: "business-automation-workflows"
+      category_id: "business-automation"
+      title: "Business Workflow Automation"
+      short_description: "Eliminate repetitive tasks, connect siloed apps, and automate operations with intelligent trigger systems."
+      icon: "Zap"
+      featured: true
+      badge: "Efficiency"
+      full_description: "We audit manual bottlenecks in your company and build automated pipelines that synchronize data across your CRM, email, billing, accounting, and messaging apps automatically."
+      features:
+        - "Multi-step automated workflows & triggers"
+        - "WhatsApp, Email & SMS auto-responders"
+        - "Lead routing, scoring & instant notification"
+        - "Automated invoice generation & reconciliation"
+        - "Custom webhook connectors & ETL pipelines"
+      benefits:
+        - "Hundreds of employee hours saved monthly"
+        - "Zero human entry errors or forgotten follow-ups"
+        - "Immediate 60-second response time to inbound leads"
+      technologies:
+        - "Custom Node.js Webhooks"
+        - "Zapier & Make.com"
+        - "WhatsApp Cloud API"
+        - "PostgreSQL / Airtable"
+      process:
+        - "Workflow & Bottleneck Discovery"
+        - "Trigger & Action Architecture"
+        - "Connector Engineering & Testing"
+        - "Fail-Safe Monitoring Setup"
+        - "Team Onboarding"
+

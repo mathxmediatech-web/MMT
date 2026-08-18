@@ -1,0 +1,37 @@
+hero:
+  badge:
+    icon: "Sparkles"
+    text: "Software, IT & Digital Growth Company"
+    pulse: true
+  headline_prefix: "Build Smarter Technology."
+  headline_highlight: "Automate Operations."
+  headline_suffix: "Accelerate Growth."
+  description: "Custom software, AI automation, SaaS products and performance marketing engineered together to help businesses scale."
+  primary_cta:
+    label: "Discuss Your Project"
+    href: "/contact"
+    icon: "ArrowRight"
+  secondary_cta:
+    label: "Explore Solutions"
+    href: "/services"
+    icon: "ExternalLink"
+  trust_badges:
+    - icon: "CheckCircle2"
+      label: "8 Active Client Projects"
+    - icon: "ShieldCheck"
+      label: "Enterprise-Grade Architecture"
+    - icon: "TrendingUp"
+      label: "Proven High-ROAS Growth"
+  floating_cards:
+    - title: "Live Client Operations"
+      status: "3 Running Systems"
+      badge: "Production Active"
+      icon: "Activity"
+    - title: "In Active Engineering"
+      status: "5 Ongoing Builds"
+      badge: "Fast Delivery"
+      icon: "Cpu"
+    - title: "Growth & Automation"
+      status: "360° Digital Scalability"
+      badge: "End-to-End"
+      icon: "Zap"

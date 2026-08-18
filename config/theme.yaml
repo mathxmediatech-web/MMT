@@ -1,0 +1,24 @@
+theme:
+  default_mode: "light"
+  allow_toggle: true
+  colors:
+    primary: "#0ea5e9"
+    primary_dark: "#0284c7"
+    primary_light: "#38bdf8"
+    secondary: "#0284c7"
+    secondary_light: "#e0f2fe"
+    accent: "#38bdf8"
+    accent_glow: "#06b6d4"
+    background: "#ffffff"
+    background_alt: "#f0f9ff"
+    surface: "#ffffff"
+    surface_subtle: "#f8fafc"
+    surface_elevated: "#ffffff"
+    text: "#0f172a"
+    text_muted: "#64748b"
+    text_light: "#94a3b8"
+    border: "#e2e8f0"
+    border_accent: "#bae6fd"
+  glow_intensity: "high"
+  card_glassmorphism: true
+  border_radius: "1rem"

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogGrad)" />
+  <rect x="80" y="80" width="1040" height="470" rx="30" fill="#ffffff" fill-opacity="0.06" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2"/>
+  <rect x="140" y="140" width="60" height="60" rx="16" fill="#38bdf8"/>
+  <text x="170" y="182" fill="#ffffff" font-family="sans-serif" font-size="32" font-weight="900" text-anchor="middle">M</text>
+  <text x="220" y="180" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="900">MMT</text>
+  <text x="220" y="205" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" letter-spacing="4">MATHXMEDIA&amp;TECH</text>
+  
+  <text x="140" y="320" fill="#ffffff" font-family="sans-serif" font-size="54" font-weight="900">Build. Grow. Automate.</text>
+  <text x="140" y="380" fill="#e0f2fe" font-family="sans-serif" font-size="24">We grow businesses through technology, marketing and automation.</text>
+  
+  <rect x="140" y="440" width="280" height="50" rx="14" fill="#ffffff" />
+  <text x="280" y="472" fill="#0284c7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">8 Active Client Projects</text>
+</svg>

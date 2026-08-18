@@ -1,0 +1,66 @@
+navigation:
+  brand:
+    name: "MMT"
+    tagline: "MATHXMEDIA&TECH"
+    logo_path: "/images/mmt-logo.png"
+  items:
+    - label: "Home"
+      href: "/"
+    - label: "Solutions"
+      href: "/services"
+      has_dropdown: true
+      dropdown_items:
+        - label: "AI Development Agency"
+          description: "Custom AI, LLMs, AI Agents & Automation"
+          href: "/ai-development"
+          icon: "Sparkles"
+        - label: "Software & SaaS Engineering"
+          description: "Custom Apps, Cloud Platforms, ERP & CRM"
+          href: "/software-development"
+          icon: "Code2"
+        - label: "Performance Digital Marketing"
+          description: "Meta Ads, Google Ads & Growth Funnels"
+          href: "/digital-marketing"
+          icon: "TrendingUp"
+        - label: "Technical SEO Services"
+          description: "Organic Traffic, Technical Audits & Schema"
+          href: "/digital-marketing/seo-services"
+          icon: "Search"
+    - label: "Products"
+      href: "/products/restaurant-pos-software"
+      has_dropdown: true
+      dropdown_items:
+        - label: "Restaurant POS Software"
+          description: "Cloud Billing, KOT & Multi-outlet Management"
+          href: "/products/restaurant-pos-software"
+          icon: "Store"
+    - label: "Locations"
+      href: "/locations/software-company-bhilwara"
+      has_dropdown: true
+      dropdown_items:
+        - label: "Bhilwara Tech HQ"
+          description: "Software & Digital Growth Company in Bhilwara"
+          href: "/locations/software-company-bhilwara"
+          icon: "MapPin"
+        - label: "Udaipur Hub"
+          description: "Digital Marketing & SEO Agency in Udaipur"
+          href: "/locations/digital-marketing-agency-udaipur"
+          icon: "MapPin"
+        - label: "Jaipur Hub"
+          description: "Software Development Company in Jaipur"
+          href: "/locations/software-development-company-jaipur"
+          icon: "MapPin"
+    - label: "Projects"
+      href: "/projects"
+    - label: "About"
+      href: "/about"
+    - label: "Contact"
+      href: "/contact"
+  cta_button:
+    label: "Start a Project"
+    href: "/contact"
+    icon: "ArrowRight"
+  mobile:
+    enable_quick_contact: true
+    whatsapp_button: true
+

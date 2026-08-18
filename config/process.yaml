@@ -1,0 +1,54 @@
+process:
+  section_badge: "Execution Methodology"
+  section_title: "How We Engineer & Scale Your Growth"
+  section_description: "Our structured 5-stage lifecycle guarantees clear milestones, transparent sprint velocity, and predictable business outcomes."
+  steps:
+    - step_number: "01"
+      title: "Discover & Audit"
+      subtitle: "Deep Operational & Market Analysis"
+      description: "We analyze your business workflows, current software bottlenecks, customer acquisition costs, and competitive landscape to pinpoint high-leverage growth opportunities."
+      icon: "Search"
+      deliverables:
+        - "Technical architecture audit"
+        - "Marketing funnel & CAC analysis"
+        - "Detailed roadmap & timeline scope"
+
+    - step_number: "02"
+      title: "Strategize & Blueprint"
+      subtitle: "System Architecture & Campaign Strategy"
+      description: "We map out software data models, API contracts, UI/UX wireframes, ad creative concepts, and automation triggers before writing a line of code."
+      icon: "Compass"
+      deliverables:
+        - "Interactive UI/UX prototypes"
+        - "Database & API specifications"
+        - "Full-funnel paid ad media plan"
+
+    - step_number: "03"
+      title: "Build & Engineer"
+      subtitle: "Agile Development & Creative Production"
+      description: "Our engineering squad develops the software with test coverage and responsive polish while our creative team produces high-converting video and ad assets."
+      icon: "Code2"
+      deliverables:
+        - "Bi-weekly sprint demos"
+        - "Production-ready codebase"
+        - "Ad campaign asset suite"
+
+    - step_number: "04"
+      title: "Deploy & Launch"
+      subtitle: "Zero-Downtime Release & Campaign Ignition"
+      description: "We migrate data, configure cloud SSL & CDN caching, launch ad sets with algorithmic budget pacing, and verify all live tracking pixels."
+      icon: "Rocket"
+      deliverables:
+        - "Live cloud deployment"
+        - "Campaign activation across Meta & Google"
+        - "Staff onboarding & SOP walkthroughs"
+
+    - step_number: "05"
+      title: "Optimize & Scale"
+      subtitle: "Telemetry, Maintenance & Growth Expansion"
+      description: "Post-launch, we continuously monitor server telemetry, squash bugs, optimize conversion rates, and scale winning ad sets for maximum ROI."
+      icon: "TrendingUp"
+      deliverables:
+        - "24/7 uptime & error monitoring"
+        - "Weekly ROAS & conversion reviews"
+        - "Continuous feature releases & speed patches"

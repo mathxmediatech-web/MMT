@@ -1,0 +1,34 @@
+faq:
+  section_badge: "Got Questions?"
+  section_title: "Frequently Asked Questions"
+  section_description: "Find clear, straightforward answers about how MMT engages, delivers software, and scales digital marketing."
+  items:
+    - id: "faq-01"
+      question: "How is MMT different from generic digital marketing or IT agencies?"
+      answer: "Most marketing agencies cannot write production software, and most software houses don't understand lead generation or conversion math. MMT unifies both under one roof: we build the software and high-speed web apps, automate your operations, and run the paid ad funnels that drive real, measurable revenue into those systems."
+      category: "General"
+
+    - id: "faq-02"
+      question: "What types of software and applications does MMT build?"
+      answer: "We engineer custom web applications (Next.js/React/Node), mobile apps (React Native/Flutter), multi-tenant SaaS platforms with Stripe billing, tailor-made ERPs and CRMs, internal company operations portals, and automated data pipelines."
+      category: "Software"
+
+    - id: "faq-03"
+      question: "How do you manage ongoing client projects and communication?"
+      answer: "We believe in radical transparency. Every client receives dedicated project communication via Slack/WhatsApp, structured bi-weekly sprint demos, a live staging URL to review progress at any moment, and direct access to their lead engineers and growth strategists."
+      category: "Process"
+
+    - id: "faq-04"
+      question: "Can we start with digital marketing or software development individually?"
+      answer: "Absolutely. Many clients engage us initially for a custom software project or a Meta/Google Ads campaign, and later expand into business automation and full digital management as trust and ROI are established."
+      category: "Engagement"
+
+    - id: "faq-05"
+      question: "How long does a typical software build or marketing campaign launch take?"
+      answer: "Digital marketing campaigns and lead funnels typically go live within 7 to 10 days after creative and audience approval. Custom web apps and MVP software builds range between 3 to 8 weeks depending on scope, with iterative releases delivered along the way."
+      category: "Timelines"
+
+    - id: "faq-06"
+      question: "How does the YAML-driven architecture benefit our website in the long term?"
+      answer: "Your entire website content, services, active project showcases, contact details, branding colors, and section visibility are controlled via simple YAML files. Your team can update text, add new projects, or modify stats without having to hire a developer or modify codebase files."
+      category: "Technology"

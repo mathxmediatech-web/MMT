@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)" rx="24"/>
+  <circle cx="650" cy="400" r="180" fill="#0ea5e9" opacity="0.2"/>
+  <rect x="60" y="60" width="680" height="380" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="2"/>
+  <text x="90" y="240" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="bold">NovaFit National Funnel</text>
+  <text x="90" y="280" fill="#38bdf8" font-family="sans-serif" font-size="18">Meta &amp; Instagram High-ROAS Lead Engine</text>
+  <rect x="90" y="320" width="100" height="30" rx="6" fill="#10b981"/>
+  <text x="140" y="340" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">RUNNING</text>
+</svg>

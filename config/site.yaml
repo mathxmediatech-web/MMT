@@ -1,0 +1,56 @@
+site:
+  name: "MMT | MATHXMEDIA&TECH"
+  short_name: "MMT"
+  url: "https://mathxmediatech.com"
+  language: "en"
+  theme_mode_toggle: true
+  announcement_bar:
+    enabled: true
+    badge: "Active Operations"
+    text: "Currently running 3 live client systems & developing 5 next-gen enterprise projects."
+    link_text: "View Live Projects"
+    link_url: "/projects"
+  home_sections:
+    - hero
+    - stats
+    - trust_indicators
+    - services_overview
+    - software_capabilities
+    - marketing_funnel
+    - automation_system
+    - featured_projects
+    - tech_stack
+    - process_timeline
+    - industries
+    - testimonials
+    - faq
+    - cta_banner
+  sections:
+    hero:
+      enabled: true
+    stats:
+      enabled: true
+    trust_indicators:
+      enabled: true
+    services_overview:
+      enabled: true
+    software_capabilities:
+      enabled: true
+    marketing_funnel:
+      enabled: true
+    automation_system:
+      enabled: true
+    featured_projects:
+      enabled: true
+    tech_stack:
+      enabled: true
+    process_timeline:
+      enabled: true
+    industries:
+      enabled: true
+    testimonials:
+      enabled: true
+    faq:
+      enabled: true
+    cta_banner:
+      enabled: true

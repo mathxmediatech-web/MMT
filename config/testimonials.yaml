@@ -1,0 +1,44 @@
+testimonials:
+  section_badge: "Client Trust"
+  section_title: "What Business Leaders Say About MMT"
+  section_description: "Real feedback from founders, executives, and marketing leaders whose companies run on our software and growth systems."
+  items:
+    - id: "testimonial-01"
+      author_name: "Rajesh Kulkarni"
+      author_role: "Managing Director"
+      company_name: "Apex Precision Industries"
+      project_title: "Custom Manufacturing ERP System"
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+      quote: "MMT replaced our nightmare of 15 spreadsheets with a blazing-fast ERP. Warehouse dispatch errors dropped to zero within three weeks, and having automated WhatsApp invoices saved our accounts team 20 hours every week."
+      rating: 5
+      badge: "Software & Automation"
+
+    - id: "testimonial-02"
+      author_name: "Sarah Jenkins"
+      author_role: "Founder & CMO"
+      company_name: "NovaFit National Clubs"
+      project_title: "Meta & Instagram Growth Funnel"
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80"
+      quote: "Our cost per lead dropped by 42% in the very first month. MMT doesn't just run ads; they built an automated WhatsApp qualification bot that feeds our front desks with ready-to-join members every single morning."
+      rating: 5
+      badge: "Digital Marketing"
+
+    - id: "testimonial-03"
+      author_name: "Dr. Arvind Mehta"
+      author_role: "Chief Medical Officer"
+      company_name: "MediCare Specialty Centers"
+      project_title: "Patient Booking OS & Google Local Dominance"
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"
+      quote: "Our patient no-show rate plummeted from nearly 30% down to under 4% thanks to MMT's SMS & WhatsApp automated reminder workflows. Plus, we are now the top-rated clinic on Google Maps in our district."
+      rating: 5
+      badge: "Automation & Local SEO"
+
+    - id: "testimonial-04"
+      author_name: "Karan Singhania"
+      author_role: "Head of Product"
+      company_name: "EduLearn Cloud (Beta)"
+      project_title: "Multi-Tenant SaaS EdTech Platform"
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80"
+      quote: "MMT's technical engineering prowess is exceptional. They architected a multi-tenant WebRTC classroom engine that effortlessly handles thousands of concurrent students with zero jitter."
+      rating: 5
+      badge: "SaaS Development"

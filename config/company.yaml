@@ -1,0 +1,35 @@
+company:
+  name: "MMT"
+  full_name: "MATHXMEDIA&TECH"
+  tagline: "Technology. Marketing. Growth."
+  headline: "We grow businesses through technology, marketing and automation."
+  description: "MMT (MATHXMEDIA&TECH) is a premier technology and digital growth enterprise. We partner with ambitious SMEs and enterprises to build scalable software, deploy high-ROI marketing systems, and automate core business operations."
+  founded_year: "2023"
+  active_projects_count: 8
+  running_projects_count: 3
+  ongoing_projects_count: 5
+  mission: "To empower modern businesses with resilient digital infrastructure, high-velocity marketing pipelines, and intelligent workflow automation that drive measurable revenue growth."
+  vision: "To be the most trusted end-to-end technology and growth accelerator globally, engineering digital supremacy for businesses of all scales."
+  core_pillars:
+    - title: "BUILD — Software & IT"
+      description: "Custom software, SaaS products, web applications, mobile apps, AI integrations, ERP and POS systems."
+      icon: "Code2"
+    - title: "AUTOMATE — Business Operations"
+      description: "AI agents, CRM integration, WhatsApp API bots, automated lead scoring, and workflow orchestration."
+      icon: "Cpu"
+    - title: "GROW — Digital Marketing & Telemetry"
+      description: "Technical SEO, GEO (AI Search Optimization), Meta & Google Ads, CRO, and revenue telemetry."
+      icon: "TrendingUp"
+  why_us:
+    - title: "Zero Fluff, Pure Execution"
+      description: "We don't just provide consulting decks; we engineer production-grade systems and manage high-performing ad campaigns."
+      icon: "Zap"
+    - title: "Single-Source Digital Partner"
+      description: "No more disconnected vendors. Your tech, marketing, and automation are unified under one synchronized growth strategy."
+      icon: "Layers"
+    - title: "Enterprise Quality for Growing Businesses"
+      description: "Modern architecture, security best practices, and conversion rate optimization tailored to both scale-ups and SMEs."
+      icon: "CheckCircle2"
+    - title: "Transparent Metrics & Reporting"
+      description: "Real-time visibility into your software milestones, sprint velocity, ad spend return (ROAS), and lead quality."
+      icon: "BarChart3"

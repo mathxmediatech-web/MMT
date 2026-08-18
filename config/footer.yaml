@@ -1,0 +1,59 @@
+footer:
+  brand:
+    name: "MMT"
+    full_name: "MATHXMEDIA&TECH"
+    tagline: "We build digital solutions and growth systems for modern businesses."
+    badge: "Next-Gen Tech Partner"
+  newsletter:
+    enabled: true
+    title: "Stay Ahead in Tech & Growth"
+    description: "Subscribe for our monthly case studies, software engineering tips, and growth frameworks."
+    button_text: "Subscribe"
+    placeholder: "Enter your work email"
+  columns:
+    - title: "Solutions & AI"
+      links:
+        - label: "AI Development Agency"
+          href: "/ai-development"
+        - label: "Software & SaaS Engineering"
+          href: "/software-development"
+        - label: "Performance Marketing"
+          href: "/digital-marketing"
+        - label: "Technical SEO Services"
+          href: "/digital-marketing/seo-services"
+        - label: "Restaurant POS Software"
+          href: "/products/restaurant-pos-software"
+    - title: "Regional Hubs"
+      links:
+        - label: "Software Company Bhilwara"
+          href: "/locations/software-company-bhilwara"
+        - label: "Digital Marketing Udaipur"
+          href: "/locations/digital-marketing-agency-udaipur"
+        - label: "Software Development Jaipur"
+          href: "/locations/software-development-company-jaipur"
+        - label: "All Case Studies"
+          href: "/projects"
+    - title: "Company"
+      links:
+        - label: "About MMT"
+          href: "/about"
+        - label: "Services Suite"
+          href: "/services"
+        - label: "Case Studies"
+          href: "/projects"
+        - label: "Work Methodology"
+          href: "/about#process"
+        - label: "Contact Us"
+          href: "/contact"
+  bottom:
+    copyright: "© 2026 MMT (MATHXMEDIA&TECH). All rights reserved."
+    legal_links:
+      - label: "Privacy Policy"
+        href: "/privacy-policy"
+      - label: "Terms of Service"
+        href: "/terms-of-service"
+      - label: "Security & SLA"
+        href: "/security-sla"
+    status_indicator:
+      text: "All Systems Operational • 99.9% Uptime"
+
