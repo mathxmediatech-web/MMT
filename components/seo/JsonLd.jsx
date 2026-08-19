@@ -1,4 +1,4 @@
-```jsx
+
 const SITE_URL = "https://mathxmedia.tech";
 
 const officialSocialProfiles = [
@@ -155,4 +155,4 @@ export default function JsonLd({ type = "Organization", data = {} }) {
     />
   );
 }
-```
+
