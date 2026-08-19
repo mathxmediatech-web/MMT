@@ -306,176 +306,176 @@ export default function Navbar({ navigation, site, contact }) {
             </div>
           </div>
         </div>
+      </header>
 
-        {/* Mobile Navigation Drawer Overlay */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 bg-slate-950/98 backdrop-blur-2xl text-white flex flex-col animate-in fade-in duration-200">
-            {/* Mobile Header Bar */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800/80 bg-slate-900/80 shrink-0">
-              <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2.5"
-              >
-                {navigation?.brand?.logo_path ? (
-                  <Image
-                    src={navigation.brand.logo_path}
-                    alt={navigation.brand.name || "MMT"}
-                    width={150}
-                    height={40}
-                    className="h-9 w-auto object-contain"
-                    priority
-                  />
-                ) : (
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-black text-base">
-                    M
-                  </div>
-                )}
-                <div className="flex flex-col">
-                  <span className="text-base font-black tracking-tight text-white leading-none">
-                    {navigation?.brand?.name || "MMT"}
-                  </span>
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-blue-400 leading-tight mt-0.5">
-                    {navigation?.brand?.tagline || "MATHXMEDIA&TECH"}
-                  </span>
+      {/* Mobile Navigation Drawer Overlay (Outside header to avoid backdrop-blur containment) */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-[100] bg-slate-950 text-white flex flex-col animate-in fade-in duration-200">
+          {/* Mobile Header Bar */}
+          <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 bg-slate-900 shrink-0">
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-2.5"
+            >
+              {navigation?.brand?.logo_path ? (
+                <Image
+                  src={navigation.brand.logo_path}
+                  alt={navigation.brand.name || "MMT"}
+                  width={150}
+                  height={40}
+                  className="h-9 w-auto object-contain"
+                  priority
+                />
+              ) : (
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-black text-base shadow-lg shadow-blue-500/20">
+                  M
                 </div>
-              </Link>
+              )}
+              <div className="flex flex-col">
+                <span className="text-base font-black tracking-tight text-white leading-none">
+                  {navigation?.brand?.name || "MMT"}
+                </span>
+                <span className="text-[9px] font-bold uppercase tracking-widest text-blue-400 leading-tight mt-0.5">
+                  {navigation?.brand?.tagline || "MATHXMEDIA&TECH"}
+                </span>
+              </div>
+            </Link>
 
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
-                aria-label="Close menu"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-200 hover:text-white hover:bg-slate-700 transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="w-5 h-5 text-white" />
+            </button>
+          </div>
 
-            {/* Mobile Scrollable Nav Content */}
-            <div className="flex-1 overflow-y-auto px-5 py-6 space-y-4">
-              {navigation?.items?.map((item, idx) => {
-                const isActive =
-                  pathname === item.href ||
-                  (item.href !== "/" && pathname.startsWith(item.href));
-                const isExpanded = !!mobileExpanded[idx];
+          {/* Mobile Scrollable Nav Content */}
+          <div className="flex-1 overflow-y-auto px-5 py-6 space-y-4">
+            {navigation?.items?.map((item, idx) => {
+              const isActive =
+                pathname === item.href ||
+                (item.href !== "/" && pathname.startsWith(item.href));
+              const isExpanded = !!mobileExpanded[idx];
 
-                if (item.has_dropdown) {
-                  return (
-                    <div
-                      key={idx}
-                      className="rounded-2xl bg-slate-900/60 border border-slate-800/80 overflow-hidden"
-                    >
-                      <button
-                        type="button"
-                        onClick={() => toggleMobileExpand(idx)}
-                        className="w-full flex items-center justify-between p-4 text-left font-bold text-slate-100 hover:text-blue-400 transition-colors"
-                      >
-                        <div className="flex items-center gap-2.5">
-                          <span className="text-base">{item.label}</span>
-                          {item.badge && (
-                            <span className="bg-blue-500/20 text-blue-400 text-xs px-2 py-0.5 rounded-full font-bold border border-blue-500/30">
-                              {item.badge}
-                            </span>
-                          )}
-                        </div>
-                        <ChevronDown
-                          className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${
-                            isExpanded ? "rotate-180 text-blue-400" : ""
-                          }`}
-                        />
-                      </button>
-
-                      {isExpanded && (
-                        <div className="px-3 pb-3 space-y-1.5 border-t border-slate-800/60 pt-2 bg-slate-950/40">
-                          {item.dropdown_items?.map((dropItem, dropIdx) => (
-                            <Link
-                              key={dropIdx}
-                              href={dropItem.href}
-                              onClick={() => setMobileMenuOpen(false)}
-                              className="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-600/10 border border-transparent hover:border-blue-500/20 transition-all group"
-                            >
-                              <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 shrink-0 mt-0.5">
-                                <DynamicIcon name={dropItem.icon} className="w-4 h-4" />
-                              </div>
-                              <div>
-                                <div className="text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
-                                  {dropItem.label}
-                                </div>
-                                {dropItem.description && (
-                                  <div className="text-xs text-slate-400 line-clamp-1 mt-0.5">
-                                    {dropItem.description}
-                                  </div>
-                                )}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-
+              if (item.has_dropdown) {
                 return (
-                  <Link
+                  <div
                     key={idx}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`flex items-center justify-between p-4 rounded-2xl border transition-all ${
-                      isActive
-                        ? "bg-blue-600/15 border-blue-500/40 text-blue-400 font-bold"
-                        : "bg-slate-900/60 border-slate-800/80 text-slate-200 hover:text-white font-medium"
-                    }`}
+                    className="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden shadow-md"
                   >
-                    <span className="text-base">{item.label}</span>
-                    {item.badge && (
-                      <span className="bg-blue-500/20 text-blue-400 text-xs px-2 py-0.5 rounded-full font-bold border border-blue-500/30">
-                        {item.badge}
-                      </span>
-                    )}
-                  </Link>
-                );
-              })}
+                    <button
+                      type="button"
+                      onClick={() => toggleMobileExpand(idx)}
+                      className="w-full flex items-center justify-between p-4 text-left font-bold text-white hover:text-blue-400 transition-colors"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-base sm:text-lg">{item.label}</span>
+                        {item.badge && (
+                          <span className="bg-blue-500/20 text-blue-400 text-xs px-2.5 py-0.5 rounded-full font-bold border border-blue-500/30">
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
+                      <ChevronDown
+                        className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${
+                          isExpanded ? "rotate-180 text-blue-400" : ""
+                        }`}
+                      />
+                    </button>
 
-              {/* Action Buttons & Quick Contact */}
-              <div className="pt-4 space-y-3">
-                {navigation?.cta_button && (
-                  <Link
-                    href={navigation.cta_button.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="w-full py-3.5 px-5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-center text-base shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 transition-all"
+                    {isExpanded && (
+                      <div className="px-3 pb-3 space-y-2 border-t border-slate-800 pt-3 bg-slate-950/80">
+                        {item.dropdown_items?.map((dropItem, dropIdx) => (
+                          <Link
+                            key={dropIdx}
+                            href={dropItem.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="flex items-start gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/40 transition-all group"
+                          >
+                            <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 shrink-0 mt-0.5">
+                              <DynamicIcon name={dropItem.icon} className="w-4.5 h-4.5 text-blue-400" />
+                            </div>
+                            <div>
+                              <div className="text-sm font-bold text-white group-hover:text-blue-400 transition-colors">
+                                {dropItem.label}
+                              </div>
+                              {dropItem.description && (
+                                <div className="text-xs text-slate-400 line-clamp-1 mt-0.5">
+                                  {dropItem.description}
+                                </div>
+                              )}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center justify-between p-4 rounded-2xl border transition-all ${
+                    isActive
+                      ? "bg-blue-600/20 border-blue-500/50 text-blue-400 font-bold"
+                      : "bg-slate-900 border-slate-800 text-white hover:text-blue-400 font-semibold"
+                  }`}
+                >
+                  <span className="text-base sm:text-lg">{item.label}</span>
+                  {item.badge && (
+                    <span className="bg-blue-500/20 text-blue-400 text-xs px-2.5 py-0.5 rounded-full font-bold border border-blue-500/30">
+                      {item.badge}
+                    </span>
+                  )}
+                </Link>
+              );
+            })}
+
+            {/* Action Buttons & Quick Contact */}
+            <div className="pt-4 space-y-3">
+              {navigation?.cta_button && (
+                <Link
+                  href={navigation.cta_button.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold text-center text-base shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+                >
+                  <span>{navigation.cta_button.label}</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              )}
+
+              <div className="grid grid-cols-2 gap-3 pt-2">
+                {contact?.whatsapp && (
+                  <a
+                    href={`https://wa.me/${contact.whatsapp.replace(/[^0-9]/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3 px-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold text-xs flex items-center justify-center gap-2"
                   >
-                    <span>{navigation.cta_button.label}</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
+                    <MessageCircle className="w-4 h-4 text-emerald-400" />
+                    <span>WhatsApp</span>
+                  </a>
                 )}
 
-                <div className="grid grid-cols-2 gap-3 pt-2">
-                  {contact?.whatsapp && (
-                    <a
-                      href={`https://wa.me/${contact.whatsapp.replace(/[^0-9]/g, "")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="py-3 px-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold text-xs flex items-center justify-center gap-2"
-                    >
-                      <MessageCircle className="w-4 h-4 text-emerald-400" />
-                      <span>WhatsApp</span>
-                    </a>
-                  )}
-
-                  {contact?.phone && (
-                    <a
-                      href={`tel:${contact.phone}`}
-                      className="py-3 px-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-semibold text-xs text-center flex items-center justify-center gap-1.5"
-                    >
-                      <span>Call Us</span>
-                    </a>
-                  )}
-                </div>
+                {contact?.phone && (
+                  <a
+                    href={`tel:${contact.phone}`}
+                    className="py-3 px-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 font-bold text-xs text-center flex items-center justify-center gap-1.5"
+                  >
+                    <span>Call Us</span>
+                  </a>
+                )}
               </div>
             </div>
           </div>
-        )}
-      </header>
+        </div>
+      )}
     </>
   );
 }
