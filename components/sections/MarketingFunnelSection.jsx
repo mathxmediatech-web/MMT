@@ -60,7 +60,7 @@ export default function MarketingFunnelSection() {
         />
 
         {/* Funnel Pipeline Visual Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 relative">
           {funnelStages.map((stage, idx) => {
             const Icon = stage.icon;
             return (
@@ -98,7 +98,7 @@ export default function MarketingFunnelSection() {
 
                 {/* Arrow Connector for Desktop */}
                 {idx < funnelStages.length - 1 && (
-                  <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-6 h-6 rounded-full bg-white border border-blue-200 items-center justify-center text-blue-600 shadow-sm">
+                  <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-6 h-6 rounded-full bg-white border border-blue-200 items-center justify-center text-blue-600 shadow-sm">
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
                 )}
