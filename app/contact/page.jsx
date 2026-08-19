@@ -99,7 +99,7 @@ export default function ContactPage() {
                           {contact.phone}
                         </div>
                         <div className="text-xs text-emerald-600 mt-0.5">
-                          Typically replies in &lt; 15 mins
+                          Typically replies in under 1 hour
                         </div>
                       </div>
                     </Card>

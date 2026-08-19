@@ -16,7 +16,7 @@ export default function ProcessSection({ process }) {
           title={process.section_title || "How We Engineer & Scale Your Growth"}
           description={
             process.section_description ||
-            "Our structured 5-stage lifecycle guarantees clear milestones, transparent sprint velocity, and predictable business outcomes."
+            "Our structured 5-stage lifecycle delivers clear milestones, transparent sprint velocity, and predictable business outcomes."
           }
         />
 

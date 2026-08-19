@@ -21,7 +21,7 @@ The entire website is configuration-driven. Non-developers can manage all websit
 ├── hero.yaml          # Hero headline, badges, descriptions, quick console metrics
 ├── stats.yaml         # Statistics numbers, suffixes, labels, descriptions
 ├── services.yaml      # All service categories, items, features, benefits, processes
-├── projects.yaml      # 8 active client projects (3 Running + 5 Ongoing)
+├── projects.yaml      # 5 flagship client projects (4 Live + 1 Active Build)
 ├── technologies.yaml  # Categorized tech stack & skill badges
 ├── industries.yaml    # Industry specialization cards
 ├── process.yaml       # 5-step delivery methodology (Discover to Optimize)

@@ -1,7 +1,7 @@
 process:
   section_badge: "Execution Methodology"
   section_title: "How We Engineer & Scale Your Growth"
-  section_description: "Our structured 5-stage lifecycle guarantees clear milestones, transparent sprint velocity, and predictable business outcomes."
+  section_description: "Our structured 5-stage lifecycle delivers clear milestones, transparent sprint velocity, and predictable business outcomes."
   steps:
     - step_number: "01"
       title: "Discover & Audit"
