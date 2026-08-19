@@ -31,12 +31,30 @@ export async function generateMetadata() {
       "Technology, marketing and automation solutions.",
     keywords: seo?.default?.keywords || [],
     authors: [{ name: company.full_name, url: seo?.default?.site_url }],
+    icons: {
+      icon: [
+        { url: "/images/mmt-logo.png", sizes: "512x512", type: "image/png" },
+        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+        { url: "/favicon.ico", sizes: "any" },
+      ],
+      shortcut: "/images/mmt-logo.png",
+      apple: [
+        { url: "/images/mmt-logo.png", sizes: "180x180", type: "image/png" },
+        { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      ],
+    },
     openGraph: {
       title: seo?.default?.default_title,
       description: seo?.default?.description,
       url: seo?.default?.site_url,
       siteName: company.full_name,
       images: [
+        {
+          url: "/images/mmt-logo.png",
+          width: 1200,
+          height: 1200,
+          alt: company.full_name,
+        },
         {
           url: seo?.default?.og_image || "/images/og-image.jpg",
           width: 1200,
@@ -52,7 +70,7 @@ export async function generateMetadata() {
       title: seo?.default?.default_title,
       description: seo?.default?.description,
       creator: seo?.default?.twitter_creator,
-      images: [seo?.default?.og_image || "/images/og-image.jpg"],
+      images: ["/images/mmt-logo.png"],
     },
     robots: {
       index: true,
@@ -87,6 +105,10 @@ export default function RootLayout({ children }) {
       <head>
         <ThemeScript theme={theme} />
         <GoogleTagManager />
+        <link rel="icon" href="/images/mmt-logo.png" sizes="512x512" type="image/png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/mmt-logo.png" />
+        <link rel="shortcut icon" href="/images/mmt-logo.png" />
         <JsonLd type="Organization" data={{ name: company.full_name, description: company.description }} />
         <JsonLd type="WebSite" />
       </head>
