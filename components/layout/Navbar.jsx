@@ -89,7 +89,7 @@ export default function Navbar({ navigation, site, contact }) {
     <>
       {/* Announcement Bar */}
       {announcement?.enabled && (
-        <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white text-xs py-2 px-4 text-center font-medium shadow-inner relative z-50">
+        <div className="hidden sm:block bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white text-xs py-2 px-4 text-center font-medium shadow-inner relative z-50">
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
             {announcement.badge && (
               <span className="bg-white/20 text-white px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
