@@ -1,11 +1,14 @@
-import { getSEOConfig } from "@/lib/config";
+import { getSEOConfig, getAllServiceSlugs, getAllProjectSlugs } from "@/lib/config";
 
 export default async function sitemap() {
   const seo = getSEOConfig();
   const baseUrl = seo?.default?.site_url || "https://mathxmediatech.com";
   const currentDate = new Date().toISOString();
 
-  const routes = [
+  const serviceSlugs = getAllServiceSlugs();
+  const projectSlugs = getAllProjectSlugs();
+
+  const staticRoutes = [
     "",
     "/about",
     "/services",
@@ -19,12 +22,25 @@ export default async function sitemap() {
     "/locations/software-company-bhilwara",
     "/locations/digital-marketing-agency-udaipur",
     "/locations/software-development-company-jaipur",
+    "/privacy-policy",
+    "/terms-of-service",
+    "/security-sla",
   ];
 
-  return routes.map((route) => ({
+  const serviceRoutes = serviceSlugs.map((slug) => `/services/${slug}`);
+  const projectRoutes = projectSlugs.map((slug) => `/projects/${slug}`);
+
+  const allRoutes = [...staticRoutes, ...serviceRoutes, ...projectRoutes];
+
+  return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
     changeFrequency: route === "" ? "daily" : "weekly",
-    priority: route === "" ? 1.0 : route.startsWith("/locations") ? 0.8 : 0.9,
+    priority:
+      route === ""
+        ? 1.0
+        : route.startsWith("/locations") || route.startsWith("/privacy") || route.startsWith("/terms") || route.startsWith("/security")
+        ? 0.7
+        : 0.9,
   }));
 }
