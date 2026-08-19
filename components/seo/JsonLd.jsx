@@ -16,6 +16,8 @@ export default function JsonLd({ type = "Organization", data = {} }) {
       sameAs: [
         "https://twitter.com/MathXmedia",
         "https://www.linkedin.com/company/mathxmediatech",
+        "https://www.facebook.com/share/1D4eDwBEgt/",
+        "https://www.instagram.com/mathxmedia.tech/",
       ],
       description:
         data.description ||
