@@ -21,6 +21,8 @@ footer:
           href: "/digital-marketing"
         - label: "Technical SEO Services"
           href: "/digital-marketing/seo-services"
+        - label: "Tutora — Education SaaS"
+          href: "/products/tutora-education-saas"
         - label: "Restaurant POS Software"
           href: "/products/restaurant-pos-software"
     - title: "Regional Hubs"

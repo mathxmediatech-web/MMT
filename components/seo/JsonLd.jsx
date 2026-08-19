@@ -1,4 +1,3 @@
-
 const SITE_URL = "https://mathxmedia.tech";
 
 const officialSocialProfiles = [
@@ -6,6 +5,21 @@ const officialSocialProfiles = [
   "https://x.com/MathXmedia",
   "https://www.linkedin.com/company/mathxmediatech",
   "https://www.facebook.com/share/1D4eDwBEgt/",
+];
+
+const ownedProducts = [
+  {
+    "@type": "SoftwareApplication",
+    "@id": "https://tutora.mathxmedia.tech/#software",
+    name: "Tutora",
+    url: "https://tutora.mathxmedia.tech/",
+  },
+  {
+    "@type": "SoftwareApplication",
+    "@id": "https://restoos.mathxmedia.tech/#software",
+    name: "RestoOS Restaurant POS",
+    url: "https://restoos.mathxmedia.tech/",
+  },
 ];
 
 export default function JsonLd({ type = "Organization", data = {} }) {
@@ -29,7 +43,10 @@ export default function JsonLd({ type = "Organization", data = {} }) {
 
       sameAs: officialSocialProfiles,
 
+      owns: ownedProducts,
+
       description:
+        data.description ||
         "MMT (MATHXMEDIA&TECH) provides software development, IT solutions, AI automation, SaaS products and digital marketing services for growing businesses.",
 
       ...data,
@@ -155,4 +172,3 @@ export default function JsonLd({ type = "Organization", data = {} }) {
     />
   );
 }
-

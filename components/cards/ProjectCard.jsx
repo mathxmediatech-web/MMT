@@ -44,6 +44,20 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* Project Title */}
+        {project.slug === "tutora-edtech-platform" && (
+          <div className="mb-2">
+            <a
+              href="https://tutora.mathxmedia.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-50 border border-blue-200 text-blue-800 text-[11px] font-bold hover:bg-blue-100 transition-colors"
+            >
+              <span>Tutora — Education SaaS by MMT</span>
+              <ExternalLink className="w-3 h-3 text-blue-600" />
+            </a>
+          </div>
+        )}
+
         <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">
           {project.title}
         </h3>

@@ -8,6 +8,8 @@ import Badge from "@/components/ui/Badge";
 import CTASection from "@/components/sections/CTASection";
 import ProjectCard from "@/components/cards/ProjectCard";
 
+import JsonLd from "@/components/seo/JsonLd";
+
 import {
   getProjectsConfig,
   getProjectBySlug,
@@ -49,6 +51,7 @@ export default function ProjectDetailPage({ params }) {
     notFound();
   }
 
+  const isTutora = project.slug === "tutora-edtech-platform";
   const isRunning = project.status === "Running";
   const isOngoing = project.status === "Ongoing";
   const relatedProjects = allProjects.items
@@ -57,6 +60,23 @@ export default function ProjectDetailPage({ params }) {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      {isTutora && (
+        <JsonLd
+          type="SoftwareApplication"
+          data={{
+            "@id": "https://tutora.mathxmedia.tech/#software",
+            name: "Tutora",
+            url: "https://tutora.mathxmedia.tech/",
+            description:
+              "Tutora is an education SaaS platform by MMT (MATHXMEDIA&TECH) for institutes, classes, learning management and digital education workflows.",
+            applicationCategory: "EducationalApplication",
+            operatingSystem: "Web, Android, iOS",
+            publisher: {
+              "@id": "https://mathxmedia.tech/#organization",
+            },
+          }}
+        />
+      )}
       {/* Header */}
       <section className="pt-10 pb-12 sm:pt-16 sm:pb-16 bg-gradient-to-b from-blue-50/80 via-white to-white relative overflow-hidden border-b border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
@@ -108,6 +128,20 @@ export default function ProjectDetailPage({ params }) {
                 </span>
               )}
             </div>
+
+            {isTutora && (
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold">
+                <span>Product Relationship:</span>
+                <a
+                  href="https://tutora.mathxmedia.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 underline flex items-center gap-1"
+                >
+                  Tutora — Education SaaS by MMT <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            )}
 
             <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
               {project.title}

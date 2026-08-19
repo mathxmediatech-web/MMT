@@ -18,6 +18,8 @@ export default async function sitemap() {
     "/software-development",
     "/digital-marketing",
     "/digital-marketing/seo-services",
+    "/products",
+    "/products/tutora-education-saas",
     "/products/restaurant-pos-software",
     "/locations/software-company-bhilwara",
     "/locations/digital-marketing-agency-udaipur",

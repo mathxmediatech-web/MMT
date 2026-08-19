@@ -27,9 +27,13 @@ navigation:
           href: "/digital-marketing/seo-services"
           icon: "Search"
     - label: "Products"
-      href: "/products/restaurant-pos-software"
+      href: "/products"
       has_dropdown: true
       dropdown_items:
+        - label: "Tutora — Education SaaS"
+          description: "Multi-Institute LMS, Online Coaching & App SaaS"
+          href: "/products/tutora-education-saas"
+          icon: "GraduationCap"
         - label: "Restaurant POS Software"
           description: "Cloud Billing, KOT & Multi-outlet Management"
           href: "/products/restaurant-pos-software"

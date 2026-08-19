@@ -15,14 +15,14 @@ projects:
     # 1. TUTORA (EDTECH PLATFORM)
     - id: "project-tutora"
       slug: "tutora-edtech-platform"
-      title: "Tutora: Multi-Institute EdTech SaaS & LMS Platform"
-      client_name: "Tutora Learning Technologies"
-      client_industry: "Education & EdTech"
+      title: "Tutora — Education SaaS by MMT"
+      client_name: "Tutora Learning Technologies (MMT Commercial Product)"
+      client_industry: "Education & EdTech SaaS"
       category: "Software Development"
       status: "Running"
       status_badge_color: "emerald"
       featured: true
-      short_description: "Classplus-style comprehensive EdTech platform enabling coaching centers to launch custom-branded mobile apps & websites, teach live online, sell batch courses, and manage study materials."
+      short_description: "Tutora — Education SaaS by MMT is a multi-institute LMS enabling coaching centers to launch custom-branded mobile apps & websites, teach live online, sell batch courses, and manage study materials."
       overview: "Tutora empowers educators, coaching institutes, and creators to establish their independent digital academy with fully branded Android/iOS apps and web portals. Teachers can conduct interactive live sessions, sell test series & course batches, distribute encrypted digital notes, and monitor student analytics seamlessly."
       problem: "Coaching institutes were losing brand identity and high revenue margins on third-party aggregators while struggling with manual student admissions, fragmented video platforms, and unorganized notes distribution."
       solution: "MMT built a white-label multi-tenant EdTech operating system giving each coaching center its own custom-branded app & website, complete with live classrooms, batch monetization, and anti-piracy content security."
