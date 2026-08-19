@@ -1,6 +1,12 @@
-"use client";
+```jsx
+const SITE_URL = "https://mathxmedia.tech";
 
-import Script from "next/script";
+const officialSocialProfiles = [
+  "https://www.instagram.com/mathxmedia.tech/",
+  "https://x.com/MathXmedia",
+  "https://www.linkedin.com/company/mathxmediatech",
+  "https://www.facebook.com/share/1D4eDwBEgt/",
+];
 
 export default function JsonLd({ type = "Organization", data = {} }) {
   let schemaData = {};
@@ -9,52 +15,66 @@ export default function JsonLd({ type = "Organization", data = {} }) {
     schemaData = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: data.name || "MMT | MATHXMEDIA&TECH",
-      alternateName: "MATHXMEDIA&TECH",
-      url: data.url || "https://mathxmedia.tech",
-      logo: "https://mathxmedia.tech/images/mmt-logo.png",
-      sameAs: [
-        "https://twitter.com/MathXmedia",
-        "https://www.linkedin.com/company/mathxmediatech",
-        "https://www.facebook.com/share/1D4eDwBEgt/",
-        "https://www.instagram.com/mathxmedia.tech/",
-      ],
+      "@id": `${SITE_URL}/#organization`,
+
+      name: "MMT (MATHXMEDIA&TECH)",
+      alternateName: ["MMT", "MATHXMEDIA&TECH"],
+
+      url: `${SITE_URL}/`,
+
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/mmt-logo.png`,
+      },
+
+      sameAs: officialSocialProfiles,
+
       description:
-        data.description ||
-        "MMT (MATHXMEDIA&TECH) unifies custom software engineering, high-ROAS digital marketing, and intelligent business automation into a single growth accelerator.",
+        "MMT (MATHXMEDIA&TECH) provides software development, IT solutions, AI automation, SaaS products and digital marketing services for growing businesses.",
+
       ...data,
     };
-  } else if (type === "WebSite") {
+  }
+
+  else if (type === "WebSite") {
     schemaData = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "MMT | MATHXMEDIA&TECH",
-      url: data.url || "https://mathxmedia.tech",
+      "@id": `${SITE_URL}/#website`,
+
+      name: "MMT (MATHXMEDIA&TECH)",
+      url: `${SITE_URL}/`,
+
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+
       ...data,
     };
-  } else if (type === "LocalBusiness") {
+  }
+
+  else if (type === "LocalBusiness") {
     schemaData = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      name: data.name || "MMT | MATHXMEDIA&TECH",
-      image: "https://mathxmedia.tech/images/og-image.svg",
-      "@id": data.url || "https://mathxmedia.tech",
-      url: data.url || "https://mathxmedia.tech",
-      telephone: data.phone || "+91-9876543210",
-      priceRange: "$$",
+      "@id": `${SITE_URL}/#localbusiness`,
+
+      name: "MMT (MATHXMEDIA&TECH)",
+      url: `${SITE_URL}/`,
+
+      image: `${SITE_URL}/images/og-image.svg`,
+
+      telephone: "+919116172700",
+
       address: {
         "@type": "PostalAddress",
-        streetAddress: data.streetAddress || "Tech Hub Center",
-        addressLocality: data.city || "Bhilwara",
-        addressRegion: data.region || "Rajasthan",
-        postalCode: data.postalCode || "311001",
+        streetAddress: "R.C. Vyas Colony",
+        addressLocality: "Bhilwara",
+        addressRegion: "Rajasthan",
+        postalCode: "311001",
         addressCountry: "IN",
       },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: data.latitude || 25.3478,
-        longitude: data.longitude || 74.6369,
-      },
+
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: [
@@ -66,39 +86,59 @@ export default function JsonLd({ type = "Organization", data = {} }) {
           "Saturday",
         ],
         opens: "09:00",
-        closes: "19:00",
+        closes: "19:30",
       },
+
+      sameAs: officialSocialProfiles,
+
       ...data,
     };
-  } else if (type === "Service") {
+  }
+
+  else if (type === "Service") {
     schemaData = {
       "@context": "https://schema.org",
       "@type": "Service",
-      serviceType: data.serviceType || "Custom Software & Digital Marketing",
+
+      serviceType:
+        data.serviceType || "Software Development and Digital Marketing",
+
       provider: {
-        "@type": "Organization",
-        name: "MMT (MATHXMEDIA&TECH)",
-        url: "https://mathxmedia.tech",
+        "@id": `${SITE_URL}/#organization`,
       },
-      areaServed: ["India", "Global"],
+
+      areaServed:
+        data.areaServed || {
+          "@type": "Country",
+          name: "India",
+        },
+
       description: data.description,
+
       ...data,
     };
-  } else if (type === "SoftwareApplication") {
+  }
+
+  else if (type === "SoftwareApplication") {
     schemaData = {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: data.name || "Restaurant POS & Billing Software",
-      operatingSystem: "Web, Windows, Android, iOS",
+
+      name: data.name || "MMT Restaurant POS Software",
+
       applicationCategory: "BusinessApplication",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "INR",
+
+      operatingSystem: "Web, Windows, Android, iOS",
+
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
       },
+
       ...data,
     };
-  } else {
+  }
+
+  else {
     schemaData = {
       "@context": "https://schema.org",
       "@type": type,
@@ -107,11 +147,12 @@ export default function JsonLd({ type = "Organization", data = {} }) {
   }
 
   return (
-    <Script
-      id={`json-ld-${type.toLowerCase()}`}
+    <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schemaData).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }
-
+```
