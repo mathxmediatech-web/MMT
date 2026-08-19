@@ -54,7 +54,17 @@ export async function generateMetadata() {
       creator: seo?.default?.twitter_creator,
       images: [seo?.default?.og_image || "/images/og-image.jpg"],
     },
-    robots: seo?.default?.robots || "index, follow",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
 
