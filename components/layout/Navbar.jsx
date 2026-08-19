@@ -289,10 +289,10 @@ export default function Navbar({ navigation, site, contact }) {
                   href={`https://wa.me/${contact.whatsapp.replace(/[^0-9]/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg text-emerald-600 bg-emerald-50"
+                  className="p-2.5 rounded-xl text-emerald-600 bg-emerald-50/90 border border-emerald-200/80 hover:bg-emerald-100 transition-colors shadow-xs"
                   title="WhatsApp"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <MessageCircle className="w-5 h-5 text-emerald-600" />
                 </a>
               )}
               <button
