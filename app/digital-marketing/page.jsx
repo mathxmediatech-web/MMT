@@ -12,6 +12,9 @@ export async function generateMetadata() {
     description:
       pageSeo.description ||
       "Drive predictable revenue with MMT's performance marketing, Meta & Google ad funnels, server-side tracking, and conversion optimization.",
+    alternates: {
+      canonical: "/digital-marketing",
+    },
   };
 }
 

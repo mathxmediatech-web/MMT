@@ -12,6 +12,9 @@ export async function generateMetadata() {
     description:
       pageSeo.description ||
       "Modern cloud restaurant POS software with instant billing, inventory control, KOT kitchen screens, QR table ordering, and real-time analytics.",
+    alternates: {
+      canonical: "/products/restaurant-pos-software",
+    },
   };
 }
 

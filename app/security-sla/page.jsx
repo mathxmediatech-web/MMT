@@ -9,6 +9,9 @@ import { getCompanyConfig, getContactConfig } from "@/lib/config";
 export const metadata = {
   title: "Security & Service Level Agreement (SLA)",
   description: "Enterprise infrastructure reliability, high availability commitment, incident response times, and security protocols at MMT.",
+  alternates: {
+    canonical: "/security-sla",
+  },
 };
 
 export default function SecuritySLAPage() {

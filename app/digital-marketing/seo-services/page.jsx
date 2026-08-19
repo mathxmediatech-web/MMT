@@ -12,6 +12,9 @@ export async function generateMetadata() {
     description:
       pageSeo.description ||
       "Improve visibility across Google search results and AI engines (ChatGPT, Perplexity) with MMT's technical SEO audits, log-file analysis, schema engineering, and GEO strategy.",
+    alternates: {
+      canonical: "/digital-marketing/seo-services",
+    },
   };
 }
 

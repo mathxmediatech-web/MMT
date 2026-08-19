@@ -21,6 +21,9 @@ export async function generateMetadata() {
     description:
       seo?.pages?.services?.description ||
       "Explore MMT's full-spectrum capabilities: custom software, web applications, SaaS, Meta & Google ads, SEO, and business automation.",
+    alternates: {
+      canonical: "/services",
+    },
   };
 }
 

@@ -12,6 +12,9 @@ export async function generateMetadata() {
     description:
       pageSeo.description ||
       "Architect high-speed custom software, SaaS platforms, and enterprise ERP/CRM systems engineered for scale.",
+    alternates: {
+      canonical: "/software-development",
+    },
   };
 }
 

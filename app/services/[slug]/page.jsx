@@ -22,8 +22,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const service = getServiceBySlug(params.slug);
-  const company = getCompanyConfig();
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug || params?.slug;
+  const service = getServiceBySlug(slug);
 
   if (!service) {
     return { title: "Service Not Found" };
@@ -32,6 +33,9 @@ export async function generateMetadata({ params }) {
   return {
     title: { absolute: `${service.title} | MMT` },
     description: service.short_description || service.full_description,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
   };
 }
 

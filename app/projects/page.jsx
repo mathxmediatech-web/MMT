@@ -20,6 +20,9 @@ export async function generateMetadata() {
     description:
       seo?.pages?.projects?.description ||
       "Browse MMT's active portfolio of real-world software products, SaaS platforms, and client builds.",
+    alternates: {
+      canonical: "/projects",
+    },
   };
 }
 

@@ -9,6 +9,9 @@ import { getCompanyConfig, getContactConfig } from "@/lib/config";
 export const metadata = {
   title: "Terms of Service",
   description: "Terms of Service and Master Service Agreement for MMT (MATHXMEDIA&TECH) software, SaaS products, and digital growth services.",
+  alternates: {
+    canonical: "/terms-of-service",
+  },
 };
 
 export default function TermsOfServicePage() {

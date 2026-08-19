@@ -26,6 +26,9 @@ export async function generateMetadata() {
       seo?.pages?.about?.description ||
       company.description ||
       "Learn about MMT (MATHXMEDIA&TECH) - engineering high-performance software and marketing systems.",
+    alternates: {
+      canonical: "/about",
+    },
   };
 }
 

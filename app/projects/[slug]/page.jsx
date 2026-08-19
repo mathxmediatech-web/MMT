@@ -22,8 +22,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const project = getProjectBySlug(params.slug);
-  const company = getCompanyConfig();
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug || params?.slug;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     return { title: "Project Not Found" };
@@ -32,6 +33,9 @@ export async function generateMetadata({ params }) {
   return {
     title: { absolute: `${project.title} | MMT` },
     description: project.short_description || project.overview,
+    alternates: {
+      canonical: `/projects/${slug}`,
+    },
   };
 }
 

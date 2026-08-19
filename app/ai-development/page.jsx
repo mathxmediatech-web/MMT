@@ -12,6 +12,9 @@ export async function generateMetadata() {
     description:
       pageSeo.description ||
       "Build custom AI solutions, generative AI models, autonomous AI agents, and RAG architectures with MMT.",
+    alternates: {
+      canonical: "/ai-development",
+    },
   };
 }
 

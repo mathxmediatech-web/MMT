@@ -27,7 +27,22 @@ import {
   getTestimonialsConfig,
   getFAQConfig,
   getContactConfig,
+  getSEOConfig,
 } from "@/lib/config";
+
+export async function generateMetadata() {
+  const seo = getSEOConfig();
+  const pageSeo = seo?.pages?.home || {};
+  return {
+    title: { absolute: "MMT | Software, AI, Digital Marketing & Business Automation" },
+    description:
+      pageSeo.description ||
+      "MMT (MATHXMEDIA&TECH) unifies custom software engineering, high-ROAS digital marketing, and intelligent business automation into a single growth accelerator.",
+    alternates: {
+      canonical: "/",
+    },
+  };
+}
 
 export default function HomePage() {
   const site = getSiteConfig();

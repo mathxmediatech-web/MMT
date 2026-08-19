@@ -22,6 +22,9 @@ export async function generateMetadata() {
     description:
       seo?.pages?.contact?.description ||
       "Get in touch with MMT technical leads for custom software development, digital marketing, or business automation.",
+    alternates: {
+      canonical: "/contact",
+    },
   };
 }
 

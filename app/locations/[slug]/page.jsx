@@ -99,11 +99,16 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const loc = locationData[params.slug];
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug || params?.slug;
+  const loc = locationData[slug];
   if (!loc) return {};
   return {
     title: { absolute: `${loc.heroTitle} | MMT` },
     description: loc.tagline,
+    alternates: {
+      canonical: `/locations/${slug}`,
+    },
   };
 }
 
