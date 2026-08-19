@@ -7,10 +7,10 @@ export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.seo_services || {};
   return {
-    title: pageSeo.title || "Technical SEO & GEO (AI Search) Services | MMT",
+    title: pageSeo.title || "Technical SEO & GEO (AI Search) Services",
     description:
       pageSeo.description ||
-      "Dominate Google search results and AI engines (ChatGPT, Perplexity) with MMT's technical SEO audits, log-file analysis, schema engineering, and GEO strategy.",
+      "Improve visibility across Google search results and AI engines (ChatGPT, Perplexity) with MMT's technical SEO audits, log-file analysis, schema engineering, and GEO strategy.",
   };
 }
 
@@ -72,7 +72,7 @@ export default function TechnicalSEOServicesPage() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mb-8 leading-relaxed">
-              Dominate traditional Google search and next-generation AI engines (Perplexity, ChatGPT, Gemini). MMT engineers server log analysis, topical authority, structured schema, and content decay monitoring.
+              Improve visibility across Google search and next-generation AI engines (Perplexity, ChatGPT, Gemini). MMT engineers server log analysis, topical authority, structured schema, and content decay monitoring.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link

@@ -106,7 +106,7 @@ export default function HeroSection({ hero, company, stats }) {
                 </div>
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  8 Active Projects
+                  5 Flagship Projects
                 </span>
               </div>
 
@@ -116,22 +116,22 @@ export default function HeroSection({ hero, company, stats }) {
                   <div className="flex items-center gap-2 text-blue-600 mb-1">
                     <Activity className="w-4 h-4" />
                     <span className="text-[11px] font-bold uppercase tracking-wider">
-                      Live Operations
+                      Live Production
                     </span>
                   </div>
-                  <div className="text-2xl font-black text-slate-900">3 Running</div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">ERP, Ads, Clinic OS</div>
+                  <div className="text-2xl font-black text-slate-900">4 Systems</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">Tutora, POS, WhiteLaptop, Gym</div>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-indigo-50/80 to-white border border-indigo-150">
                   <div className="flex items-center gap-2 text-indigo-600 mb-1">
                     <Cpu className="w-4 h-4" />
                     <span className="text-[11px] font-bold uppercase tracking-wider">
-                      In Development
+                      Active Engineering
                     </span>
                   </div>
-                  <div className="text-2xl font-black text-slate-900">5 Ongoing</div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">SaaS, 3D Portal, Apps</div>
+                  <div className="text-2xl font-black text-slate-900">1 Build</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">Verified Services Marketplace</div>
                 </div>
               </div>
 
@@ -147,8 +147,8 @@ export default function HeroSection({ hero, company, stats }) {
                       <TrendingUp className="w-3.5 h-3.5" />
                     </div>
                     <div>
-                      <div className="font-bold text-slate-800">NovaFit Meta Ads Engine</div>
-                      <div className="text-[10px] text-slate-500">450+ leads/mo • -42% CPL</div>
+                      <div className="font-bold text-slate-800">Meta & Google Growth Funnels</div>
+                      <div className="text-[10px] text-slate-500">Ad Optimization & Lead Routing</div>
                     </div>
                   </div>
                   <span className="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold text-[10px]">
@@ -162,12 +162,12 @@ export default function HeroSection({ hero, company, stats }) {
                       <Server className="w-3.5 h-3.5" />
                     </div>
                     <div>
-                      <div className="font-bold text-slate-800">EduLearn SaaS Platform</div>
-                      <div className="text-[10px] text-slate-500">Multi-tenant WebRTC LMS</div>
+                      <div className="font-bold text-slate-800">Tutora EdTech SaaS Platform</div>
+                      <div className="text-[10px] text-slate-500">Multi-Institute App & Web Portal</div>
                     </div>
                   </div>
                   <span className="px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 font-bold text-[10px]">
-                    Sprint 4
+                    Live
                   </span>
                 </div>
               </div>

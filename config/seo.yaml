@@ -16,7 +16,7 @@ seo:
 
   pages:
     home:
-      title: "MMT | Software, AI, Digital Marketing & Business Automation"
+      title: "MMT | Custom Software, AI, Digital Marketing & Business Automation"
       description: "MMT (MATHXMEDIA&TECH) unifies custom software engineering, high-ROAS digital marketing, and intelligent business automation into a single growth accelerator."
     about:
       title: "About MMT — Our Mission, Capabilities & Story"
@@ -25,22 +25,22 @@ seo:
       title: "Our Services — Software Engineering, Marketing & Automation"
       description: "Explore MMT's full-spectrum capabilities: custom web apps, mobile apps, SaaS, Meta/Google ads, SEO, CRM/ERP, and business automation."
     ai_development:
-      title: "AI Development Company | Custom AI, LLMs & Agents | MMT"
+      title: "AI Development Company | Custom AI, LLMs & Autonomous Agents"
       description: "Build custom AI software solutions, generative AI models, autonomous AI agents, and RAG architectures with MMT."
     software_development:
-      title: "Custom Software Development Company | Enterprise & SaaS | MMT"
+      title: "Custom Software Development Company | Enterprise & SaaS Engineering"
       description: "Architect high-speed custom software, SaaS platforms, and enterprise ERP/CRM systems engineered for scale and reliability."
     digital_marketing:
-      title: "Performance Digital Marketing Agency | Meta & Google Ads | MMT"
+      title: "Performance Digital Marketing Agency | Meta & Google Ads"
       description: "Drive predictable revenue with MMT's performance marketing, Meta & Google ad funnels, server-side tracking, and conversion optimization."
     seo_services:
-      title: "Technical SEO & GEO (AI Search) Services | MMT"
+      title: "Technical SEO & GEO (AI Search) Services"
       description: "Optimize visibility across Google Search and AI answer/discovery platforms such as ChatGPT and Perplexity with technical SEO, structured data, topical authority and GEO strategies."
     restaurant_pos:
-      title: "Cloud Restaurant POS & Billing Software | Multi-Outlet | MMT"
+      title: "Cloud Restaurant POS & Billing Software | Multi-Outlet OS"
       description: "Modern cloud restaurant POS software with instant billing, inventory control, KOT kitchen screens, QR table ordering, and real-time analytics."
     projects:
-      title: "Projects & Case Studies — Active Engagements"
+      title: "Projects & Case Studies — Active Flagship Engagements"
       description: "Browse our running production systems and ongoing development builds across ERP, SaaS, marketing funnels, and clinic booking OS."
     contact:
       title: "Contact MMT — Start Your Next Project"

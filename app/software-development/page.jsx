@@ -7,7 +7,7 @@ export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.software_development || {};
   return {
-    title: pageSeo.title || "Custom Software Development Company | MMT",
+    title: pageSeo.title || "Custom Software Development Company | Enterprise & SaaS",
     description:
       pageSeo.description ||
       "Architect high-speed custom software, SaaS platforms, and enterprise ERP/CRM systems engineered for scale.",
@@ -110,6 +110,36 @@ export default function SoftwareDevelopmentPage() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Software Development Methodology */}
+        <section className="py-20 bg-slate-950 border-t border-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">Our Software Engineering Lifecycle</h2>
+              <p className="text-slate-400 text-lg">A disciplined, transparent 5-stage process designed to eliminate architectural debt and deliver on schedule.</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+              {[
+                { step: "01", title: "Discovery & Scope", desc: "Detailed technical requirement mapping, system wireframing, and DB schema design." },
+                { step: "02", title: "Architecture Design", desc: "Selecting optimal cloud stack, REST API contracts, security bounds, and DB models." },
+                { step: "03", title: "Agile Sprint Code", desc: "Clean code sprints with automated unit tests, continuous integration, and weekly demos." },
+                { step: "04", title: "QA & Security Audit", desc: "Rigorous penetration testing, automated regression testing, and load stress audits." },
+                { step: "05", title: "CI/CD & Deployment", desc: "Containerized deployment to AWS/Docker with zero downtime and automated backups." },
+              ].map((m, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                  <div>
+                    <span className="text-xs font-black font-mono text-cyan-400 bg-cyan-950 px-2.5 py-1 rounded-lg border border-cyan-800/50">
+                      STAGE {m.step}
+                    </span>
+                    <h3 className="text-lg font-bold text-white mt-4 mb-2">{m.title}</h3>
+                    <p className="text-slate-400 text-xs leading-relaxed">{m.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

@@ -88,7 +88,7 @@ services:
       slug: "lead-generation-seo"
       category_id: "digital-marketing"
       title: "SEO & Lead Generation Systems"
-      short_description: "Organic search domination, technical SEO audits, and automated lead capture funnels."
+      short_description: "Sustainable organic search growth, technical SEO audits, and automated lead capture funnels."
       icon: "Target"
       featured: false
       badge: "Long-term Value"
@@ -119,7 +119,7 @@ services:
       slug: "google-business-profile"
       category_id: "digital-marketing"
       title: "Google Business & Local SEO"
-      short_description: "Dominate Google Maps, 3-pack local search, and convert nearby customers into calls and visits."
+      short_description: "Increase local search visibility on Google Maps, 3-pack search results, and convert nearby customers into calls and visits."
       icon: "MapPin"
       featured: false
       badge: "Local Reach"

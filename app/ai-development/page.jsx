@@ -7,7 +7,7 @@ export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.ai_development || {};
   return {
-    title: pageSeo.title || "AI Solutions & Development Agency | MMT",
+    title: pageSeo.title || "AI Solutions & Custom AI Development Agency",
     description:
       pageSeo.description ||
       "Build custom AI solutions, generative AI models, autonomous AI agents, and RAG architectures with MMT.",

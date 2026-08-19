@@ -7,8 +7,8 @@ import CTASection from "@/components/sections/CTASection";
 import { getCompanyConfig, getContactConfig } from "@/lib/config";
 
 export const metadata = {
-  title: "Security & Service Level Agreement (SLA) | MMT (MATHXMEDIA&TECH)",
-  description: "Enterprise infrastructure reliability, 99.9% uptime commitment, incident response times, and security protocols at MMT.",
+  title: "Security & Service Level Agreement (SLA)",
+  description: "Enterprise infrastructure reliability, high availability commitment, incident response times, and security protocols at MMT.",
 };
 
 export default function SecuritySLAPage() {

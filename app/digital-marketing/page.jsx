@@ -7,10 +7,10 @@ export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.digital_marketing || {};
   return {
-    title: pageSeo.title || "Performance Digital Marketing Agency | MMT",
+    title: pageSeo.title || "Performance Digital Marketing Agency | Meta & Google Ads",
     description:
       pageSeo.description ||
-      "Drive predictable revenue with MMT's performance marketing, Meta & Google ad funnels, server-side tracking, and technical SEO.",
+      "Drive predictable revenue with MMT's performance marketing, Meta & Google ad funnels, server-side tracking, and conversion optimization.",
   };
 }
 

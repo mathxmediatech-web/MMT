@@ -7,7 +7,7 @@ import CTASection from "@/components/sections/CTASection";
 import { getCompanyConfig, getContactConfig } from "@/lib/config";
 
 export const metadata = {
-  title: "Terms of Service | MMT (MATHXMEDIA&TECH)",
+  title: "Terms of Service",
   description: "Terms of Service and Master Service Agreement for MMT (MATHXMEDIA&TECH) software, SaaS products, and digital growth services.",
 };
 

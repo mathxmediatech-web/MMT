@@ -55,5 +55,5 @@ footer:
       - label: "Security & SLA"
         href: "/security-sla"
     status_indicator:
-      text: "All Systems Operational • 99.9% Uptime"
+      text: "All Systems Operational"
 

@@ -7,7 +7,7 @@ import CTASection from "@/components/sections/CTASection";
 import { getCompanyConfig, getContactConfig } from "@/lib/config";
 
 export const metadata = {
-  title: "Privacy Policy | MMT (MATHXMEDIA&TECH)",
+  title: "Privacy Policy",
   description: "Privacy Policy for MMT (MATHXMEDIA&TECH) — Learn how we collect, protect, and handle your personal and enterprise data.",
 };
 

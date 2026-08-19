@@ -12,12 +12,24 @@ const locationData = {
     country: "India",
     heroTitle: "Software Development & Digital Company in Bhilwara",
     primaryKeyword: "Software Company in Bhilwara",
-    tagline: "Headquartered in Bhilwara, MMT delivers custom software engineering, textile ERP automation, retail POS systems, Meta/Google ad funnels, and local business growth.",
+    tagline: "Headquartered in Bhilwara, MMT delivers custom software engineering, textile ERP automation, retail POS systems, Meta/Google ad funnels, and regional business growth.",
     features: [
-      "Custom Software & Textile ERP Engineering for Bhilwara Industries",
-      "Cloud Restaurant POS & Retail Billing Systems in Bhilwara",
-      "High-ROAS Meta & Google Ads for Regional Businesses",
-      "WhatsApp Lead Qualification & Workflow Automation",
+      {
+        title: "Textile ERP & Production Tracking",
+        description: "Custom ERP systems for Bhilwara textile mills—managing raw material inventory, yarn & fabric stock, production tracking, dispatch, GST invoicing, dealer ledgers, and automated WhatsApp dispatch alerts.",
+      },
+      {
+        title: "Cloud Restaurant POS & Retail Billing",
+        description: "Local restaurant and retail billing systems with instant KOT kitchen dispatch, GST compliance receipts, QR table ordering, inventory control, and daily P&L telemetry.",
+      },
+      {
+        title: "High-ROAS Meta & Google Ad Funnels",
+        description: "Targeted regional ad campaigns for Bhilwara manufacturers, traders, and retail stores capturing in-market buyers with direct WhatsApp lead routing.",
+      },
+      {
+        title: "Headquarters Technical Support",
+        description: "Direct on-site consulting, technical engineering, and 24/7 dedicated support from our Bhilwara headquarters team.",
+      },
     ],
     latitude: 25.3478,
     longitude: 74.6369,
@@ -31,10 +43,22 @@ const locationData = {
     primaryKeyword: "Digital Marketing Company in Udaipur",
     tagline: "Specialized digital growth, hotel/resort SEO, high-ROAS ad campaigns, and custom web portals for businesses in Udaipur and Southern Rajasthan.",
     features: [
-      "Hotel & Resort SEO & Direct Booking Conversion Funnels",
-      "Google Business Profile & Map Pack Optimization in Udaipur",
-      "High-ROAS Instagram & Meta Ad Campaigns for Tourism & Commerce",
-      "Custom Web Application & Booking Portal Development",
+      {
+        title: "Hotel & Resort Direct Booking Engine",
+        description: "Custom high-speed booking portals engineered to reduce OTA commission dependency, featuring real-time room availability, package addons, and instant UPI checkout.",
+      },
+      {
+        title: "Google Hotel & Local Map Pack Visibility",
+        description: "Local SEO and Google Business Profile optimization to capture high-intent domestic and international travelers searching for Udaipur stays and experiences.",
+      },
+      {
+        title: "Resort & Destination Wedding Lead Funnels",
+        description: "Targeted Meta & Instagram ad funnels paired with WhatsApp qualification bots for destination wedding venues, resorts, and tour operators.",
+      },
+      {
+        title: "Custom Web Application & E-Commerce Engineering",
+        description: "Modern web portals for Udaipur marble, handicrafts, jewelry, and tourism businesses with fast page speed and multi-currency support.",
+      },
     ],
   },
   "software-development-company-jaipur": {
@@ -46,10 +70,22 @@ const locationData = {
     primaryKeyword: "Software Development Company in Jaipur",
     tagline: "Empowering Jaipur startups and enterprises with scalable SaaS product engineering, custom software development, AI agent integration, and cloud DevOps.",
     features: [
-      "Custom SaaS Product & Cloud Web Application Development",
-      "Enterprise ERP & CRM Architecture for Growing Jaipur Enterprises",
-      "Generative AI & Autonomous Agent Workflow Integration",
-      "Dedicated Full-Stack Engineering Teams for Scale",
+      {
+        title: "Startup MVP & SaaS Product Engineering",
+        description: "High-velocity React, Next.js, and Node.js MVP development for Jaipur tech startups, featuring multi-tenant subscription architecture and automated billing.",
+      },
+      {
+        title: "Enterprise ERP & CRM Architecture",
+        description: "Bespoke operational backbones for scaling Jaipur enterprises, replacing legacy spreadsheets with cloud workflows, automated reporting, and role-based permissions.",
+      },
+      {
+        title: "D2C Brand Growth & Paid Ad Infrastructure",
+        description: "Full-funnel Meta & Google ad engineering, server-side tracking, custom landing pages, and retention workflows for Jaipur D2C brands.",
+      },
+      {
+        title: "Cloud DevOps & Autonomous AI Integration",
+        description: "AWS/GCP cloud architecture, containerized Docker microservices, CI/CD pipelines, and private LLM agent integrations for automated workflows.",
+      },
     ],
   },
 };
@@ -66,7 +102,7 @@ export async function generateMetadata({ params }) {
   const loc = locationData[params.slug];
   if (!loc) return {};
   return {
-    title: `${loc.heroTitle} | MMT`,
+    title: loc.heroTitle,
     description: loc.tagline,
   };
 }
@@ -144,15 +180,15 @@ export default function LocationPage({ params }) {
               <p className="text-slate-400 text-lg">Industry-tailored strategies designed specifically for {loc.city} businesses.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {loc.features.map((feat, index) => (
-                <div key={index} className="p-6 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                <div key={index} className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4 hover:border-blue-500/40 transition-all">
                   <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0 mt-1">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{feat}</h3>
-                    <p className="text-slate-400 text-sm">Targeted execution designed to increase revenue and operational efficiency in {loc.city}.</p>
+                    <h3 className="text-lg font-bold text-white mb-2">{feat.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{feat.description}</p>
                   </div>
                 </div>
               ))}

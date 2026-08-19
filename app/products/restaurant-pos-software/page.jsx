@@ -7,7 +7,7 @@ export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.restaurant_pos || {};
   return {
-    title: pageSeo.title || "Cloud Restaurant POS & Billing Software | MMT",
+    title: pageSeo.title || "Cloud Restaurant POS & Billing Software",
     description:
       pageSeo.description ||
       "Modern cloud restaurant POS software with instant billing, inventory control, KOT kitchen screens, QR table ordering, and real-time analytics.",
@@ -117,6 +117,29 @@ export default function RestaurantPOSProductPage() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Hardware & Devices */}
+        <section className="py-16 bg-slate-900 border-t border-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Supported Devices & Printers</h2>
+              <p className="text-slate-400 text-sm">Plug and play with any standard thermal printer, POS machine, or mobile tablet.</p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+              {[
+                { label: "Thermal Printers", sub: "2 inch & 3 inch USB/Ethernet/Bluetooth" },
+                { label: "Android & iOS", sub: "Tablets, Smartphones & POS Terminals" },
+                { label: "Windows & Web", sub: "Desktop Laptops, PCs & Touch Displays" },
+                { label: "KDT Displays", sub: "Digital Kitchen Display Systems" },
+              ].map((item, idx) => (
+                <div key={idx} className="p-5 rounded-xl bg-slate-950 border border-slate-800">
+                  <div className="font-bold text-amber-400 text-base mb-1">{item.label}</div>
+                  <div className="text-slate-400 text-xs">{item.sub}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
