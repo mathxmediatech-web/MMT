@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${project.title} | ${company.name}`,
+    title: project.title,
     description: project.short_description || project.overview,
   };
 }

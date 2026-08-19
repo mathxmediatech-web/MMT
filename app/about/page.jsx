@@ -21,7 +21,7 @@ export async function generateMetadata() {
   const company = getCompanyConfig();
 
   return {
-    title: seo?.pages?.about?.title || `About Us | ${company.name}`,
+    title: seo?.pages?.about?.title || "About MMT — Our Mission, Capabilities & Story",
     description:
       seo?.pages?.about?.description ||
       company.description ||

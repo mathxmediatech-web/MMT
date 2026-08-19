@@ -17,7 +17,7 @@ export async function generateMetadata() {
   const company = getCompanyConfig();
 
   return {
-    title: seo?.pages?.services?.title || `Services & Solutions | ${company.name}`,
+    title: seo?.pages?.services?.title || "Our Services — Software Engineering, Marketing & Automation",
     description:
       seo?.pages?.services?.description ||
       "Explore MMT's full-spectrum capabilities: custom software, web applications, SaaS, Meta & Google ads, SEO, and business automation.",

@@ -140,7 +140,7 @@ export default function PrivacyPolicyPage() {
               <h2>4. Third-Party Services & Integrations</h2>
             </div>
             <p className="text-sm sm:text-base">
-              To operate our cloud platforms and client deliverables, we partner with industry-leading infrastructure providers (e.g., AWS, Vercel, Supabase, PostgreSQL, Razorpay, and WhatsApp Cloud API). These third parties process data strictly under GDPR and ISO-compliant data protection terms.
+              To operate our cloud platforms and client deliverables, we partner with industry-leading infrastructure providers (e.g., AWS, Vercel, Supabase, PostgreSQL, Razorpay, and WhatsApp Cloud API). Third-party providers process data according to their applicable privacy, security, and contractual terms.
             </p>
           </div>
 

@@ -85,22 +85,22 @@ export default function SecuritySLAPage() {
               <div className="p-2 rounded-lg bg-blue-50 text-blue-600">
                 <Activity className="w-5 h-5" />
               </div>
-              <h2>1. 99.9% Production Uptime Commitment</h2>
+              <h2>1. Production Uptime & Reliability Target</h2>
             </div>
             <p className="text-sm sm:text-base">
-              MMT guarantees a minimum of <strong>99.9% monthly uptime</strong> across all managed client cloud environments and active SaaS platforms (excluding pre-scheduled maintenance windows announced 48 hours in advance).
+              MMT targets <strong>99.9% monthly infrastructure availability</strong> for eligible managed enterprise plans and active SaaS platforms (subject to individual Statement of Work and SLA contract terms).
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
                 <div className="text-2xl font-black text-blue-600">99.9%</div>
-                <div className="text-xs font-semibold text-slate-600 mt-1">Target Monthly Uptime</div>
+                <div className="text-xs font-semibold text-slate-600 mt-1">Target Availability</div>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                <div className="text-2xl font-black text-emerald-600">&lt; 15 mins</div>
-                <div className="text-xs font-semibold text-slate-600 mt-1">Critical Response Time</div>
+                <div className="text-2xl font-black text-emerald-600">&lt; 30 mins</div>
+                <div className="text-xs font-semibold text-slate-600 mt-1">P1 Incident Response</div>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                <div className="text-2xl font-black text-blue-600">24 / 7 / 365</div>
+                <div className="text-2xl font-black text-blue-600">24 / 7</div>
                 <div className="text-xs font-semibold text-slate-600 mt-1">Automated Health Telemetry</div>
               </div>
             </div>

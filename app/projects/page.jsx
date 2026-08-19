@@ -16,7 +16,7 @@ export async function generateMetadata() {
   const company = getCompanyConfig();
 
   return {
-    title: seo?.pages?.projects?.title || `Projects & Case Studies | ${company.name}`,
+    title: seo?.pages?.projects?.title || "Projects & Case Studies — Active Flagship Engagements",
     description:
       seo?.pages?.projects?.description ||
       "Browse MMT's active portfolio of real-world software products, SaaS platforms, and client builds.",
