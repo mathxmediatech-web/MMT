@@ -34,7 +34,7 @@ export default function SoftwareDevelopmentPage() {
     {
       icon: Database,
       title: "High-Performance Data Infrastructure",
-      description: "ACID-compliant PostgreSQL, Redis caching, and real-time database architecture with zero downtime.",
+      description: "ACID-compliant PostgreSQL, Redis caching, and real-time database architecture engineered for high availability.",
     },
     {
       icon: Zap,
@@ -128,7 +128,7 @@ export default function SoftwareDevelopmentPage() {
                 { step: "02", title: "Architecture Design", desc: "Selecting optimal cloud stack, REST API contracts, security bounds, and DB models." },
                 { step: "03", title: "Agile Sprint Code", desc: "Clean code sprints with automated unit tests, continuous integration, and weekly demos." },
                 { step: "04", title: "QA & Security Audit", desc: "Rigorous penetration testing, automated regression testing, and load stress audits." },
-                { step: "05", title: "CI/CD & Deployment", desc: "Containerized deployment to AWS/Docker with zero downtime and automated backups." },
+                { step: "05", title: "CI/CD & Deployment", desc: "Containerized deployment to AWS/Docker with automated rolling deployments and backups." },
               ].map((m, idx) => (
                 <div key={idx} className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
                   <div>

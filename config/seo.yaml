@@ -1,7 +1,7 @@
 seo:
   default:
     title_template: "%s | MMT"
-    default_title: "MMT | Software, AI, Digital Marketing & Business Automation"
+    default_title: "Custom Software, AI, Digital Marketing & Business Automation"
     description: "MMT (MATHXMEDIA&TECH) unifies custom software engineering, high-ROAS digital marketing, and intelligent business automation into a single growth accelerator."
     keywords:
       - "MMT"
@@ -16,7 +16,7 @@ seo:
 
   pages:
     home:
-      title: "MMT | Custom Software, AI, Digital Marketing & Business Automation"
+      title: "Custom Software, AI, Digital Marketing & Business Automation"
       description: "MMT (MATHXMEDIA&TECH) unifies custom software engineering, high-ROAS digital marketing, and intelligent business automation into a single growth accelerator."
     about:
       title: "About MMT — Our Mission, Capabilities & Story"

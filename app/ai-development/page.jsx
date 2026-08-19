@@ -29,7 +29,7 @@ export default function AIDevelopmentPage() {
     {
       icon: Workflow,
       title: "RAG (Retrieval-Augmented Generation)",
-      description: "Vector database integration (Pinecone, Qdrant, Pgvector) for zero-hallucination semantic document search.",
+      description: "Vector database integration (Pinecone, Qdrant, Pgvector) for grounded semantic document search designed to minimize hallucination risk.",
     },
     {
       icon: Cpu,
@@ -39,7 +39,7 @@ export default function AIDevelopmentPage() {
     {
       icon: ShieldCheck,
       title: "Enterprise AI Security & Governance",
-      description: "Private deployment on AWS/GCP, strict data boundary protection, and zero third-party data leakage.",
+      description: "Private deployment options on AWS/GCP with controlled data boundaries to protect sensitive enterprise infrastructure.",
     },
   ];
 
@@ -92,7 +92,7 @@ export default function AIDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">Enterprise AI Engineering Capabilities</h2>
-              <p className="text-slate-400 text-lg">From zero-to-one AI strategy to high-concurrency microservices deployed on secure cloud infrastructure.</p>
+              <p className="text-slate-400 text-lg">From initial AI strategy to high-concurrency microservices deployed on secure cloud infrastructure.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

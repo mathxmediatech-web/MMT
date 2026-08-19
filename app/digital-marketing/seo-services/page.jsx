@@ -24,7 +24,7 @@ export default function TechnicalSEOServicesPage() {
     {
       icon: Bot,
       title: "GEO (Generative Engine Optimization)",
-      description: "Optimize content structure, entity relationships, and citation footprints so AI engines (Perplexity, ChatGPT, Gemini) quote your brand.",
+      description: "Optimize content structure, entity relationships, and citation footprints so AI engines (Perplexity, ChatGPT, Gemini) discover and cite your brand.",
     },
     {
       icon: Cpu,

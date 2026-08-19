@@ -61,7 +61,7 @@ services:
       icon: "Search"
       featured: true
       badge: "High Intent"
-      full_description: "We deploy precision Google Search, Performance Max, Display, and YouTube campaigns that capture bottom-of-funnel search intent, guaranteeing your business appears in front of active buyers."
+      full_description: "We deploy precision Google Search, Performance Max, Display, and YouTube campaigns that capture bottom-of-funnel search intent, designed to position your business directly in front of active high-intent buyers."
       features:
         - "Negative keyword scrubbing & intent filtering"
         - "Performance Max and Search campaign structures"
@@ -250,13 +250,13 @@ services:
       full_description: "We create bespoke corporate websites with immersive visuals, lightning-quick load times, and dynamic CMS/YAML configuration so marketing teams can update content effortlessly."
       features:
         - "Responsive across all desktop & mobile screen sizes"
-        - "Configurable content engines (Zero code edits)"
+        - "Configurable content engines (No custom code required)"
         - "Lighthouse 95+ performance scores"
         - "Integrated analytics and lead capture"
       benefits:
         - "Instant credibility for brand stakeholders"
         - "Higher conversion rates on traffic"
-        - "Zero ongoing developer dependency for content"
+        - "Streamlined content updates without developer overhead"
       technologies:
         - "Next.js"
         - "Tailwind CSS"
@@ -287,8 +287,8 @@ services:
         - "Custom webhook connectors & ETL pipelines"
       benefits:
         - "Hundreds of employee hours saved monthly"
-        - "Zero human entry errors or forgotten follow-ups"
-        - "Immediate 60-second response time to inbound leads"
+        - "Eliminate repetitive manual entry errors and missed follow-ups"
+        - "Rapid response times to inbound leads"
       technologies:
         - "Custom Node.js Webhooks"
         - "Zapier & Make.com"
