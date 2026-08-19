@@ -2,7 +2,7 @@ import { getSEOConfig } from "@/lib/config";
 
 export default function robots() {
   const seo = getSEOConfig();
-  const baseUrl = seo?.default?.site_url || "https://mathxmediatech.com";
+  const baseUrl = seo?.default?.site_url || "https://mathxmedia.tech";
 
   return {
     rules: {

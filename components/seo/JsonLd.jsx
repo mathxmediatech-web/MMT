@@ -11,8 +11,8 @@ export default function JsonLd({ type = "Organization", data = {} }) {
       "@type": "Organization",
       name: data.name || "MMT | MATHXMEDIA&TECH",
       alternateName: "MATHXMEDIA&TECH",
-      url: data.url || "https://mathxmediatech.com",
-      logo: "https://mathxmediatech.com/images/mmt-logo.png",
+      url: data.url || "https://mathxmedia.tech",
+      logo: "https://mathxmedia.tech/images/mmt-logo.png",
       sameAs: [
         "https://twitter.com/MathXmedia",
         "https://www.linkedin.com/company/mathxmediatech",
@@ -27,7 +27,7 @@ export default function JsonLd({ type = "Organization", data = {} }) {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "MMT | MATHXMEDIA&TECH",
-      url: data.url || "https://mathxmediatech.com",
+      url: data.url || "https://mathxmedia.tech",
       ...data,
     };
   } else if (type === "LocalBusiness") {
@@ -35,9 +35,9 @@ export default function JsonLd({ type = "Organization", data = {} }) {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: data.name || "MMT | MATHXMEDIA&TECH",
-      image: "https://mathxmediatech.com/images/og-image.svg",
-      "@id": data.url || "https://mathxmediatech.com",
-      url: data.url || "https://mathxmediatech.com",
+      image: "https://mathxmedia.tech/images/og-image.svg",
+      "@id": data.url || "https://mathxmedia.tech",
+      url: data.url || "https://mathxmedia.tech",
       telephone: data.phone || "+91-9876543210",
       priceRange: "$$",
       address: {
@@ -76,7 +76,7 @@ export default function JsonLd({ type = "Organization", data = {} }) {
       provider: {
         "@type": "Organization",
         name: "MMT (MATHXMEDIA&TECH)",
-        url: "https://mathxmediatech.com",
+        url: "https://mathxmedia.tech",
       },
       areaServed: ["India", "Global"],
       description: data.description,

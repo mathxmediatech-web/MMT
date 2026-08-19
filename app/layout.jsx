@@ -17,7 +17,7 @@ import {
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const company = getCompanyConfig();
-  const siteUrl = seo?.default?.site_url || "https://mathxmediatech.com";
+  const siteUrl = seo?.default?.site_url || "https://mathxmedia.tech";
 
   return {
     metadataBase: new URL(siteUrl),

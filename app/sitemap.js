@@ -2,7 +2,7 @@ import { getSEOConfig, getAllServiceSlugs, getAllProjectSlugs } from "@/lib/conf
 
 export default async function sitemap() {
   const seo = getSEOConfig();
-  const baseUrl = seo?.default?.site_url || "https://mathxmediatech.com";
+  const baseUrl = seo?.default?.site_url || "https://mathxmedia.tech";
   const currentDate = new Date().toISOString();
 
   const serviceSlugs = getAllServiceSlugs();

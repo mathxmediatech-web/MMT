@@ -1,7 +1,7 @@
 site:
   name: "MMT | MATHXMEDIA&TECH"
   short_name: "MMT"
-  url: "https://mathxmediatech.com"
+  url: "https://mathxmedia.tech"
   language: "en"
   theme_mode_toggle: true
   announcement_bar:

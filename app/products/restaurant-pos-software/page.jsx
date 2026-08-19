@@ -63,7 +63,7 @@ export default function RestaurantPOSProductPage() {
           publisher: {
             "@type": "Organization",
             name: "MMT (MATHXMEDIA&TECH)",
-            url: "https://mathxmediatech.com",
+            url: "https://mathxmedia.tech",
           },
         }}
       />
