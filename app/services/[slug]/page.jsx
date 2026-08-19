@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: service.title,
+    title: { absolute: `${service.title} | MMT` },
     description: service.short_description || service.full_description,
   };
 }

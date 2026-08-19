@@ -6,8 +6,9 @@ import { getSEOConfig } from "@/lib/config";
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.software_development || {};
+  const baseTitle = pageSeo.title || "Custom Software Development Company | Enterprise & SaaS";
   return {
-    title: pageSeo.title || "Custom Software Development Company | Enterprise & SaaS",
+    title: { absolute: baseTitle.endsWith("MMT") ? baseTitle : `${baseTitle} | MMT` },
     description:
       pageSeo.description ||
       "Architect high-speed custom software, SaaS platforms, and enterprise ERP/CRM systems engineered for scale.",

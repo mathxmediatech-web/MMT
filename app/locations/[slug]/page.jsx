@@ -102,7 +102,7 @@ export async function generateMetadata({ params }) {
   const loc = locationData[params.slug];
   if (!loc) return {};
   return {
-    title: loc.heroTitle,
+    title: { absolute: `${loc.heroTitle} | MMT` },
     description: loc.tagline,
   };
 }

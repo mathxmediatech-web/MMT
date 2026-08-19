@@ -7,7 +7,7 @@ site:
   announcement_bar:
     enabled: true
     badge: "Active Operations"
-    text: "Currently running 3 live client systems & developing 5 next-gen enterprise projects."
+    text: "Operating 4 live production systems & 1 active flagship engineering build."
     link_text: "View Live Projects"
     link_url: "/projects"
   home_sections:

@@ -6,8 +6,9 @@ import { getSEOConfig } from "@/lib/config";
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.seo_services || {};
+  const baseTitle = pageSeo.title || "Technical SEO & GEO (AI Search) Services";
   return {
-    title: pageSeo.title || "Technical SEO & GEO (AI Search) Services",
+    title: { absolute: baseTitle.endsWith("MMT") ? baseTitle : `${baseTitle} | MMT` },
     description:
       pageSeo.description ||
       "Improve visibility across Google search results and AI engines (ChatGPT, Perplexity) with MMT's technical SEO audits, log-file analysis, schema engineering, and GEO strategy.",

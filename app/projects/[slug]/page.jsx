@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: project.title,
+    title: { absolute: `${project.title} | MMT` },
     description: project.short_description || project.overview,
   };
 }

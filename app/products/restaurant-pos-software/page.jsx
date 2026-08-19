@@ -6,8 +6,9 @@ import { getSEOConfig } from "@/lib/config";
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.restaurant_pos || {};
+  const baseTitle = pageSeo.title || "Cloud Restaurant POS & Billing Software";
   return {
-    title: pageSeo.title || "Cloud Restaurant POS & Billing Software",
+    title: { absolute: baseTitle.endsWith("MMT") ? baseTitle : `${baseTitle} | MMT` },
     description:
       pageSeo.description ||
       "Modern cloud restaurant POS software with instant billing, inventory control, KOT kitchen screens, QR table ordering, and real-time analytics.",

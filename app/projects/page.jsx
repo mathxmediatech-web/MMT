@@ -54,7 +54,7 @@ export default function ProjectsPage() {
 
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             {projects.section_description ||
-              "Explore our active client engagements — 3 live running systems driving business daily, alongside 5 high-impact builds currently in development."}
+              "Explore our active client engagements — 4 live production systems in operation, alongside 1 flagship build currently in active development."}
           </p>
 
           {/* Quick Counter Chips */}

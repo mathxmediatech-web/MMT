@@ -21,7 +21,7 @@ export default function SecuritySLAPage() {
     {
       severity: "Severity 1 (Critical Outage)",
       definition: "Core production system down, business transactions halted, zero workaround available.",
-      response: "< 15 minutes",
+      response: "< 30 minutes",
       resolution: "< 2 hours",
       color: "border-rose-200 bg-rose-50/30 text-rose-900",
       badgeColor: "bg-rose-100 text-rose-800",

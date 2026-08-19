@@ -6,8 +6,9 @@ import { getSEOConfig } from "@/lib/config";
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.ai_development || {};
+  const baseTitle = pageSeo.title || "AI Solutions & Custom AI Development Agency";
   return {
-    title: pageSeo.title || "AI Solutions & Custom AI Development Agency",
+    title: { absolute: baseTitle.endsWith("MMT") ? baseTitle : `${baseTitle} | MMT` },
     description:
       pageSeo.description ||
       "Build custom AI solutions, generative AI models, autonomous AI agents, and RAG architectures with MMT.",
@@ -120,7 +121,7 @@ export default function AIDevelopmentPage() {
           <div className="max-w-5xl mx-auto px-4 text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6">Ready to Supercharge Your Business with AI?</h2>
             <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-              Our AI engineers assess your workflows, data security, and architecture to build custom intelligent tools that deliver instant ROI.
+              Our AI engineers assess your workflows, data security, and architecture to build custom intelligent tools designed to improve operational efficiency and ROI.
             </p>
             <Link
               href="/contact"

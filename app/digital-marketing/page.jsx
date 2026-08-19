@@ -6,8 +6,9 @@ import { getSEOConfig } from "@/lib/config";
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.digital_marketing || {};
+  const baseTitle = pageSeo.title || "Performance Digital Marketing Agency | Meta & Google Ads";
   return {
-    title: pageSeo.title || "Performance Digital Marketing Agency | Meta & Google Ads",
+    title: { absolute: baseTitle.endsWith("MMT") ? baseTitle : `${baseTitle} | MMT` },
     description:
       pageSeo.description ||
       "Drive predictable revenue with MMT's performance marketing, Meta & Google ad funnels, server-side tracking, and conversion optimization.",
@@ -28,8 +29,8 @@ export default function DigitalMarketingPage() {
     },
     {
       icon: BarChart3,
-      title: "Technical SEO & Topical Authority",
-      description: "Drive organic search dominance with technical audits, semantic keyword clusters, Core Web Vitals, and schema markup.",
+      title: "SEO & Sustainable Organic Search Growth",
+      description: "Improve sustainable organic search visibility with technical audits, semantic keyword clusters, Core Web Vitals, and schema markup.",
     },
     {
       icon: Share2,
