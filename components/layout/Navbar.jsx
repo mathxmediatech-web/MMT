@@ -59,15 +59,21 @@ export default function Navbar({ navigation, site, contact }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleMouseEnter = (idx) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setOpenDropdown(idx);
+  const handleMouseEnter = (key) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setOpenDropdown(key);
   };
 
   const handleMouseLeave = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     timeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 150);
+    }, 120);
   };
 
   const toggleMobileExpand = (idx) => {
@@ -156,19 +162,20 @@ export default function Navbar({ navigation, site, contact }) {
                   pathname === item.href ||
                   (item.href !== "/" && pathname.startsWith(item.href));
 
-                const isDropdownOpen = openDropdown === idx;
+                const itemKey = item.label || `nav-${idx}`;
+                const isDropdownOpen = openDropdown === itemKey;
 
                 if (item.has_dropdown) {
                   return (
                     <div
                       key={idx}
                       className="relative"
-                      onMouseEnter={() => handleMouseEnter(idx)}
+                      onMouseEnter={() => handleMouseEnter(itemKey)}
                       onMouseLeave={handleMouseLeave}
                     >
                       <button
                         type="button"
-                        onClick={() => setOpenDropdown(isDropdownOpen ? null : idx)}
+                        onClick={() => setOpenDropdown(isDropdownOpen ? null : itemKey)}
                         className={`px-2.5 xl:px-3.5 py-2 rounded-lg text-xs xl:text-sm font-medium transition-colors flex items-center gap-1 ${
                           isActive || isDropdownOpen
                             ? "text-blue-600 bg-blue-50/80 font-semibold"
