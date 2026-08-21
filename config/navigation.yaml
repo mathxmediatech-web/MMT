@@ -1,7 +1,7 @@
 navigation:
   brand:
-    name: "MathxMedia & Tech"
-    tagline: "Build. Automate. Grow."
+    name: "MathXmedia&Tech"
+    tagline: "MathXmedia&Tech"
     logo_path: "/images/mmt-logo.png"
   items:
     - label: "Home"

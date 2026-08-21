@@ -126,7 +126,7 @@ export default function Navbar({ navigation, site, contact }) {
                 <>
                   <Image
                     src={navigation.brand.logo_path}
-                    alt={navigation.brand.name || "MMT"}
+                    alt="MathXmedia&Tech"
                     className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     width={180}
                     height={48}
@@ -134,7 +134,7 @@ export default function Navbar({ navigation, site, contact }) {
                   />
                   <div className="flex flex-col items-start">
                     <span className="text-base sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 leading-none group-hover:text-blue-600 transition-colors">
-                      {navigation?.brand?.tagline || "MATHXMEDIA&TECH"}
+                      MathXmedia&Tech
                     </span>
                   </div>
                 </>
