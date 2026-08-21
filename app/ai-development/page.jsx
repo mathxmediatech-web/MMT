@@ -1,17 +1,17 @@
 import Link from "next/link";
 import JsonLd from "@/components/seo/JsonLd";
-import { Sparkles, Cpu, Bot, Workflow, ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { Sparkles, Cpu, Bot, Workflow, ShieldCheck, ArrowRight, CheckCircle2, MessageSquare } from "lucide-react";
 import { getSEOConfig } from "@/lib/config";
 
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.ai_development || {};
-  const baseTitle = pageSeo.title || "AI Solutions & Custom AI Development Agency";
   return {
-    title: { absolute: baseTitle.endsWith("MMT") ? baseTitle : `${baseTitle} | MMT` },
+    title: { absolute: "AI Automation Company India | MathxMedia & Tech" },
     description:
       pageSeo.description ||
-      "Build custom AI solutions, generative AI models, autonomous AI agents, and RAG architectures with MMT.",
+      "Custom AI agents, AI chatbots, workflow automation, and LLM integrations built by MathxMedia & Tech.",
     alternates: {
       canonical: "/ai-development",
     },
@@ -21,30 +21,35 @@ export async function generateMetadata() {
 export default function AIDevelopmentPage() {
   const features = [
     {
-      icon: Sparkles,
-      title: "Custom Generative AI & Fine-Tuned LLMs",
-      description: "Domain-adapted Meta Llama, OpenAI, and Anthropic models trained on your proprietary enterprise data.",
+      icon: Bot,
+      title: "AI Agents for Business Automation",
+      description: "Task-oriented autonomous AI agents capable of multi-step decision making, data retrieval, and operational workflow execution.",
     },
     {
-      icon: Bot,
-      title: "Autonomous AI Agents & Workflows",
-      description: "Task-oriented AI agents capable of multi-step reasoning, external tool invocation, and automated execution.",
+      icon: MessageSquare,
+      title: "AI Chatbot & Assistant Development",
+      description: "Intelligent customer service and lead qualification chatbots integrated with WhatsApp Business API, web platforms, and CRMs.",
     },
     {
       icon: Workflow,
-      title: "RAG (Retrieval-Augmented Generation)",
-      description: "Vector database integration (Pinecone, Qdrant, Pgvector) for grounded semantic document search designed to minimize hallucination risk.",
+      title: "Custom AI Workflow Automation",
+      description: "Automate manual data extraction, document processing, lead scoring, and multi-app data routing.",
     },
     {
-      icon: Cpu,
-      title: "Process Automation & NLP Systems",
-      description: "Automate document extraction, lead scoring, customer support routing, and intelligent data processing.",
+      icon: Sparkles,
+      title: "Fine-Tuned LLMs & RAG Architectures",
+      description: "Domain-adapted Meta Llama, OpenAI, and Anthropic models connected to proprietary company knowledge databases via vector search.",
     },
     {
       icon: ShieldCheck,
-      title: "Enterprise AI Security & Governance",
-      description: "Private deployment options on AWS/GCP with controlled data boundaries to protect sensitive enterprise infrastructure.",
+      title: "Private AI Security & Data Governance",
+      description: "Secure, controlled deployment options on cloud infrastructure ensuring company data remains private and protected.",
     },
+  ];
+
+  const breadcrumbsList = [
+    { name: "Home", item: "https://mathxmedia.tech" },
+    { name: "AI Automation", item: "https://mathxmedia.tech/ai-development" },
   ];
 
   return (
@@ -52,66 +57,58 @@ export default function AIDevelopmentPage() {
       <JsonLd
         type="Service"
         data={{
-          name: "AI Solutions & Custom AI Development Agency",
-          serviceType: "AI Engineering & Autonomous Agents",
-          description: "Build custom AI software, LLM fine-tuning, RAG architectures, and AI agent automation with MMT.",
+          name: "AI Automation Company India",
+          serviceType: "AI Agent & Workflow Automation",
+          description: "Build custom AI software, AI chatbots, autonomous AI agents, and workflow automation.",
         }}
       />
-      <div className="bg-slate-950 text-white min-h-screen">
+      <div className="bg-white min-h-screen text-slate-900">
+        {/* Breadcrumbs */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+          <Breadcrumbs items={breadcrumbsList} />
+        </div>
+
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent pointer-events-none" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4" /> Next-Gen Artificial Intelligence Agency
+        <section className="relative pt-12 pb-16 bg-gradient-to-b from-blue-50/80 via-white to-white border-b border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-100 border border-cyan-200 text-cyan-800 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5" /> AI Automation Hub
             </div>
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
-              Custom AI Development & <br />
-              <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
-                Intelligent Automation Solutions
-              </span>
+            <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+              AI Automation Company India
             </h1>
-            <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mb-8 leading-relaxed">
-              We engineer production-grade Generative AI, autonomous AI agents, semantic RAG systems, and enterprise LLMs that accelerate growth and eliminate manual bottlenecks.
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl leading-relaxed font-normal">
+              MathxMedia & Tech builds custom AI agents, intelligent customer chatbots, and automated business workflow systems that eliminate manual overhead and speed up operations.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.01]"
               >
-                Schedule AI Strategy Call <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/projects"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold transition-all"
-              >
-                View Production AI Systems
+                Discuss AI Automation <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Feature Grid */}
-        <section className="py-20 bg-slate-900/50 border-t border-slate-800">
+        {/* Capability Grid */}
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">Enterprise AI Engineering Capabilities</h2>
-              <p className="text-slate-400 text-lg">From initial AI strategy to high-concurrency microservices deployed on secure cloud infrastructure.</p>
+            <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+              <h2 className="text-3xl font-bold text-slate-900">AI & Workflow Automation Capabilities</h2>
+              <p className="text-slate-600 text-base">Practical, reliable artificial intelligence solutions designed to solve real business challenges.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((f, index) => {
-                const IconComponent = f.icon;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {features.map((feat, index) => {
+                const IconComponent = feat.icon;
                 return (
-                  <div
-                    key={index}
-                    className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-all hover:shadow-xl hover:shadow-blue-500/5 group"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div key={index} className="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/90 hover:border-cyan-300 transition-all space-y-3">
+                    <div className="w-12 h-12 rounded-xl bg-cyan-600 text-white flex items-center justify-center shadow-sm">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{f.title}</h3>
-                    <p className="text-slate-400 leading-relaxed text-sm">{f.description}</p>
+                    <h3 className="text-xl font-bold text-slate-900">{feat.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed font-normal">{feat.description}</p>
                   </div>
                 );
               })}
@@ -119,18 +116,16 @@ export default function AIDevelopmentPage() {
           </div>
         </section>
 
-        {/* Strategic Proof CTA */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/40 via-indigo-900/40 to-slate-950 border-t border-slate-800">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6">Ready to Supercharge Your Business with AI?</h2>
-            <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-              Our AI engineers assess your workflows, data security, and architecture to build custom intelligent tools designed to improve operational efficiency and ROI.
-            </p>
+        {/* CTA Banner */}
+        <section className="py-16 bg-slate-50 border-t border-slate-100">
+          <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <h2 className="text-3xl font-bold text-slate-900">Ready to automate your business workflows with AI?</h2>
+            <p className="text-slate-600 text-base">Speak directly with MathxMedia & Tech AI engineering leads to map out your automation roadmap.</p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-500 hover:bg-blue-400 text-slate-950 font-bold text-lg shadow-xl shadow-blue-500/20 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.01]"
             >
-              Request Free AI Architecture Audit <ArrowRight className="w-5 h-5" />
+              Discuss Your Project <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </section>

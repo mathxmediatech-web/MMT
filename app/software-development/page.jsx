@@ -1,17 +1,18 @@
 import Link from "next/link";
 import JsonLd from "@/components/seo/JsonLd";
-import { Code2, Layers, Server, ShieldCheck, Database, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
-import { getSEOConfig } from "@/lib/config";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { Code2, Layers, Server, Database, Zap, ArrowRight, CheckCircle2, ShieldCheck, Globe, Smartphone, Cpu } from "lucide-react";
+import { getSEOConfig, getProjectsConfig } from "@/lib/config";
+import ProjectCard from "@/components/cards/ProjectCard";
 
 export async function generateMetadata() {
   const seo = getSEOConfig();
   const pageSeo = seo?.pages?.software_development || {};
-  const baseTitle = pageSeo.title || "Custom Software Development Company | Enterprise & SaaS";
   return {
-    title: { absolute: baseTitle.endsWith("MMT") ? baseTitle : `${baseTitle} | MMT` },
+    title: { absolute: "Custom Software Development Company | MathxMedia & Tech" },
     description:
       pageSeo.description ||
-      "Architect high-speed custom software, SaaS platforms, and enterprise ERP/CRM systems engineered for scale.",
+      "Engineering business software, multi-tenant SaaS platforms, web apps, mobile apps, and enterprise ERP/CRM systems.",
     alternates: {
       canonical: "/software-development",
     },
@@ -19,32 +20,45 @@ export async function generateMetadata() {
 }
 
 export default function SoftwareDevelopmentPage() {
-  const capabilities = [
+  const projectsConfig = getProjectsConfig();
+  const featuredProjects = projectsConfig?.items || [];
+
+  const servicesList = [
     {
       icon: Code2,
-      title: "Custom SaaS Platform Engineering",
-      description: "Multi-tenant cloud architectures built for security, subscription billing, tenant isolation, and rapid scale.",
+      title: "Custom Software Development",
+      description: "Tailor-made software applications engineered to digitize unique operational workflows and replace legacy systems.",
     },
     {
       icon: Layers,
-      title: "Enterprise ERP & CRM Development",
-      description: "Bespoke operational backbones managing inventory, accounting, CRM pipelines, and automated reporting.",
+      title: "SaaS Platform Engineering",
+      description: "Multi-tenant SaaS architectures built for high scalability, tenant security isolation, and automated subscription monetization.",
+    },
+    {
+      icon: Globe,
+      title: "Web Application Development",
+      description: "Fast, responsive web applications built with Next.js, React, and Node.js for smooth user experience and high concurrency.",
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Application Development",
+      description: "Cross-platform iOS and Android apps delivering native performance, offline capabilities, and secure backend integration.",
     },
     {
       icon: Server,
-      title: "Cloud-Native Microservices & APIs",
-      description: "High-concurrency Node.js, Python, and REST/GraphQL microservices running on AWS and Docker containers.",
+      title: "ERP & CRM Development",
+      description: "Centralized operational backbones for inventory management, production tracking, customer pipelines, and automated reporting.",
     },
     {
-      icon: Database,
-      title: "High-Performance Data Infrastructure",
-      description: "ACID-compliant PostgreSQL, Redis caching, and real-time database architecture engineered for high availability.",
+      icon: Cpu,
+      title: "API & System Integration",
+      description: "Secure REST/GraphQL APIs connecting third-party payment gateways, WhatsApp cloud APIs, thermal printers, and legacy databases.",
     },
-    {
-      icon: Zap,
-      title: "Rapid MVP to Enterprise Scaling",
-      description: "Agile engineering sprints delivering production-ready software MVPs in weeks, not months.",
-    },
+  ];
+
+  const breadcrumbsList = [
+    { name: "Home", item: "https://mathxmedia.tech" },
+    { name: "Software Development", item: "https://mathxmedia.tech/software-development" },
   ];
 
   return (
@@ -53,64 +67,63 @@ export default function SoftwareDevelopmentPage() {
         type="Service"
         data={{
           name: "Custom Software Development Company",
-          serviceType: "SaaS & Enterprise Software Engineering",
-          description: "Full-stack custom software, SaaS products, ERP/CRM development, and cloud platform engineering.",
+          serviceType: "Software Engineering & SaaS Development",
+          description: "Full-stack custom software, SaaS products, web apps, mobile apps, and ERP/CRM development.",
         }}
       />
-      <div className="bg-slate-950 text-white min-h-screen">
+      <div className="bg-white min-h-screen text-slate-900">
+        {/* Breadcrumbs */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+          <Breadcrumbs items={breadcrumbsList} />
+        </div>
+
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-              <Code2 className="w-4 h-4" /> Full-Stack Software Engineering Firm
+        <section className="relative pt-12 pb-16 bg-gradient-to-b from-blue-50/80 via-white to-white border-b border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider">
+              <Code2 className="w-3.5 h-3.5" /> Software Engineering Hub
             </div>
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
-              Custom Software Engineering & <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500 bg-clip-text text-transparent">
-                SaaS Platform Development
-              </span>
+            <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+              Custom Software Development Company
             </h1>
-            <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mb-8 leading-relaxed">
-              We design, build, and deploy mission-critical software systems, SaaS web applications, custom ERPs, and cloud microservices built on modern, battle-tested technologies.
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl leading-relaxed font-normal">
+              MathxMedia & Tech designs and engineers production-ready business software, multi-tenant SaaS platforms, enterprise ERPs, and cloud applications engineered for scalability.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold shadow-lg shadow-cyan-600/30 transition-all hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.01]"
               >
-                Request Architecture Consultation <ArrowRight className="w-4 h-4" />
+                Discuss Your Project <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/projects"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold transition-all"
+                href="#case-studies"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold transition-all"
               >
-                Explore Software Case Studies
+                View Case Studies
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Feature Grid */}
-        <section className="py-20 bg-slate-900/50 border-t border-slate-800">
+        {/* Capabilities Grid */}
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">Software Engineering Capabilities</h2>
-              <p className="text-slate-400 text-lg">Clean code, robust architecture, and modern DevOps practices for growing SMEs and enterprises.</p>
+            <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+              <h2 className="text-3xl font-bold text-slate-900">Comprehensive Software Engineering Services</h2>
+              <p className="text-slate-600 text-base">Outcome-driven software solutions engineered with battle-tested modern technology stacks.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {capabilities.map((c, index) => {
-                const IconComponent = c.icon;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {servicesList.map((service, index) => {
+                const IconComponent = service.icon;
                 return (
-                  <div
-                    key={index}
-                    className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition-all hover:shadow-xl hover:shadow-cyan-500/5 group"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div key={index} className="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/90 hover:border-blue-300 transition-all space-y-3">
+                    <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-sm">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{c.title}</h3>
-                    <p className="text-slate-400 leading-relaxed text-sm">{c.description}</p>
+                    <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed font-normal">{service.description}</p>
                   </div>
                 );
               })}
@@ -118,62 +131,35 @@ export default function SoftwareDevelopmentPage() {
           </div>
         </section>
 
-        {/* Software Development Methodology */}
-        <section className="py-20 bg-slate-950 border-t border-slate-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">Our Software Engineering Lifecycle</h2>
-              <p className="text-slate-400 text-lg">A disciplined, transparent 5-stage process designed to eliminate architectural debt and deliver on schedule.</p>
+        {/* Directly Embedded Case Studies Section */}
+        <section id="case-studies" className="py-16 bg-slate-50 border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                Verified Engineering Proof
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Featured Software Case Studies</h2>
+              <p className="text-slate-600 text-base">Real-world software systems and SaaS products engineered and operated by MathxMedia & Tech.</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-              {[
-                { step: "01", title: "Discovery & Scope", desc: "Detailed technical requirement mapping, system wireframing, and DB schema design." },
-                { step: "02", title: "Architecture Design", desc: "Selecting optimal cloud stack, REST API contracts, security bounds, and DB models." },
-                { step: "03", title: "Agile Sprint Code", desc: "Clean code sprints with automated unit tests, continuous integration, and weekly demos." },
-                { step: "04", title: "QA & Security Audit", desc: "Rigorous penetration testing, automated regression testing, and load stress audits." },
-                { step: "05", title: "CI/CD & Deployment", desc: "Containerized deployment to AWS/Docker with automated rolling deployments and backups." },
-              ].map((m, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-                  <div>
-                    <span className="text-xs font-black font-mono text-cyan-400 bg-cyan-950 px-2.5 py-1 rounded-lg border border-cyan-800/50">
-                      STAGE {m.step}
-                    </span>
-                    <h3 className="text-lg font-bold text-white mt-4 mb-2">{m.title}</h3>
-                    <p className="text-slate-400 text-xs leading-relaxed">{m.desc}</p>
-                  </div>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredProjects.slice(0, 3).map((project) => (
+                <ProjectCard key={project.id} project={project} />
               ))}
             </div>
           </div>
         </section>
 
-        {/* Tech Stack Banner */}
-        <section className="py-16 bg-slate-900 border-t border-slate-800">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <h3 className="text-xl font-semibold text-slate-400 mb-8">Built With World-Class Stacks</h3>
-            <div className="flex flex-wrap items-center justify-center gap-8 text-slate-300 font-semibold text-lg">
-              <span className="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700">Next.js & React</span>
-              <span className="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700">Node.js & Express</span>
-              <span className="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700">Python & FastAPI</span>
-              <span className="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700">PostgreSQL & Redis</span>
-              <span className="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700">Docker & AWS</span>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-20 bg-gradient-to-r from-slate-900 via-cyan-950 to-slate-950 border-t border-slate-800">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6">Build Your Custom Software With MMT</h2>
-            <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-              Partner with senior full-stack developers who write clean, maintainable, and highly secure code.
-            </p>
+        {/* CTA Banner */}
+        <section className="py-16 bg-white border-t border-slate-100">
+          <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <h2 className="text-3xl font-bold text-slate-900">Have a software project or SaaS concept?</h2>
+            <p className="text-slate-600 text-base">Collaborate with MathxMedia & Tech software leads to plan, build, and deploy your custom system.</p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-lg shadow-xl shadow-cyan-400/20 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.01]"
             >
-              Start Your Software Build <ArrowRight className="w-5 h-5" />
+              Discuss Your Project <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </section>

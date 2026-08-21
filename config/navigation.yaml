@@ -1,7 +1,7 @@
 navigation:
   brand:
-    name: "MMT"
-    tagline: "MATHXMEDIA&TECH"
+    name: "MathxMedia & Tech"
+    tagline: "Build. Automate. Grow."
     logo_path: "/images/mmt-logo.png"
   items:
     - label: "Home"
@@ -10,14 +10,14 @@ navigation:
       href: "/services"
       has_dropdown: true
       dropdown_items:
-        - label: "AI Development Agency"
-          description: "Custom AI, LLMs, AI Agents & Automation"
-          href: "/ai-development"
-          icon: "Sparkles"
         - label: "Software & SaaS Engineering"
           description: "Custom Apps, Cloud Platforms, ERP & CRM"
           href: "/software-development"
           icon: "Code2"
+        - label: "AI & Workflow Automation"
+          description: "AI Agents, Custom Chatbots & Automation"
+          href: "/ai-development"
+          icon: "Sparkles"
         - label: "Performance Digital Marketing"
           description: "Meta Ads, Google Ads & Growth Funnels"
           href: "/digital-marketing"
@@ -42,26 +42,30 @@ navigation:
       href: "/locations/software-company-bhilwara"
       has_dropdown: true
       dropdown_items:
-        - label: "Bhilwara Tech HQ"
-          description: "Software & Digital Growth Company in Bhilwara"
+        - label: "Bhilwara Operations HQ"
+          description: "Software Development Company in Bhilwara"
           href: "/locations/software-company-bhilwara"
           icon: "MapPin"
-        - label: "Udaipur Hub"
-          description: "Digital Marketing & SEO Agency in Udaipur"
-          href: "/locations/digital-marketing-agency-udaipur"
-          icon: "MapPin"
-        - label: "Jaipur Hub"
+        - label: "Jaipur Market"
           description: "Software Development Company in Jaipur"
           href: "/locations/software-development-company-jaipur"
           icon: "MapPin"
-    - label: "Projects"
+        - label: "Udaipur Market"
+          description: "Digital Marketing Agency in Udaipur"
+          href: "/locations/digital-marketing-agency-udaipur"
+          icon: "MapPin"
+    - label: "Case Studies"
       href: "/projects"
     - label: "About"
       href: "/about"
     - label: "Contact"
       href: "/contact"
+  primary_cta:
+    label: "Discuss Your Project"
+    href: "/contact"
+    icon: "ArrowRight"
   cta_button:
-    label: "Start a Project"
+    label: "Discuss Your Project"
     href: "/contact"
     icon: "ArrowRight"
   mobile:

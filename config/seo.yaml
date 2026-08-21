@@ -1,13 +1,14 @@
 seo:
   default:
-    title_template: "%s | MMT"
-    default_title: "Custom Software, AI, Digital Marketing & Business Automation"
-    description: "MMT (MATHXMEDIA&TECH) unifies custom software engineering, high-ROAS digital marketing, and intelligent business automation into a single growth accelerator."
+    title_template: "%s | MathxMedia & Tech"
+    default_title: "Software Development & Digital Marketing Company"
+    description: "MathxMedia & Tech builds custom software, SaaS platforms and AI automation systems, then helps businesses grow through SEO and performance marketing."
     keywords:
+      - "MathxMedia & Tech"
       - "MMT"
-      - "MATHXMEDIA&TECH"
-      - "Software Engineering"
-      - "Digital Growth Enterprise"
+      - "Software Development Company"
+      - "AI Automation Company"
+      - "Digital Growth Company"
     site_url: "https://mathxmedia.tech"
     og_image: "/images/og-image.svg"
     twitter_card: "summary_large_image"
@@ -16,35 +17,44 @@ seo:
 
   pages:
     home:
-      title: "Custom Software, AI, Digital Marketing & Business Automation"
-      description: "MMT (MATHXMEDIA&TECH) unifies custom software engineering, high-ROAS digital marketing, and intelligent business automation into a single growth accelerator."
+      title: "Software Development & Digital Marketing Company"
+      description: "MathxMedia & Tech builds custom software, SaaS platforms and AI automation systems, then helps businesses grow through SEO and performance marketing."
     about:
-      title: "About MMT — Our Mission, Capabilities & Story"
-      description: "Discover how MATHXMEDIA&TECH unifies software engineering, digital marketing, and business automation into a single growth accelerator."
+      title: "About MathxMedia & Tech — Our Story & Capabilities"
+      description: "Learn how MathxMedia & Tech combines software engineering, AI workflow automation, and performance marketing to scale modern businesses."
     services:
-      title: "Our Services — Software Engineering, Marketing & Automation"
-      description: "Explore MMT's full-spectrum capabilities: custom web apps, mobile apps, SaaS, Meta/Google ads, SEO, CRM/ERP, and business automation."
+      title: "Custom Software, AI Automation & Growth Services"
+      description: "Explore MathxMedia & Tech core service pillars: BUILD (Software & SaaS), AUTOMATE (AI & Workflows), GROW (SEO & Marketing)."
     ai_development:
-      title: "AI Development Company | Custom AI, LLMs & Autonomous Agents"
-      description: "Build custom AI software solutions, generative AI models, autonomous AI agents, and RAG architectures with MMT."
+      title: "AI Automation Company India"
+      description: "Custom AI agents, AI chatbots, workflow automation, and LLM integrations built by MathxMedia & Tech."
     software_development:
-      title: "Custom Software Development Company | Enterprise & SaaS Engineering"
-      description: "Architect high-speed custom software, SaaS platforms, and enterprise ERP/CRM systems engineered for scale and reliability."
+      title: "Custom Software Development Company"
+      description: "Engineering business software, multi-tenant SaaS platforms, web apps, mobile apps, and enterprise ERP/CRM systems."
     digital_marketing:
-      title: "Performance Digital Marketing Agency | Meta & Google Ads"
-      description: "Drive predictable revenue with MMT's performance marketing, Meta & Google ad funnels, server-side tracking, and conversion optimization."
+      title: "Performance Digital Marketing Agency"
+      description: "Drive scalable business revenue through technical SEO, Meta ads, Google ads, and conversion optimization."
     seo_services:
-      title: "Technical SEO & GEO (AI Search) Services"
-      description: "Optimize visibility across Google Search and AI answer/discovery platforms such as ChatGPT and Perplexity with technical SEO, structured data, topical authority and GEO strategies."
+      title: "Technical SEO & Growth Services"
+      description: "Data-driven SEO strategies, technical audits, entity optimization, and content architecture for scaling brands."
     restaurant_pos:
-      title: "Cloud Restaurant POS & Billing Software | Multi-Outlet OS"
-      description: "Modern cloud restaurant POS software with instant billing, inventory control, KOT kitchen screens, QR table ordering, and real-time analytics."
+      title: "Restaurant POS Software India"
+      description: "Cloud restaurant POS and billing software with instant KOT kitchen dispatch, thermal billing, QR table ordering, and inventory control."
     projects:
-      title: "Projects & Case Studies — Active Flagship Engagements"
-      description: "Browse our running production systems and ongoing development builds across ERP, SaaS, marketing funnels, and clinic booking OS."
+      title: "Case Studies & Software Projects"
+      description: "Real-world software engineering case studies: EdTech LMS, restaurant POS, digital whiteboard software, and gym management SaaS."
     contact:
-      title: "Contact MMT — Start Your Next Project"
-      description: "Get in touch with MMT technical leads for custom software development, paid ads management, or business automation consulting."
+      title: "Discuss Your Project — MathxMedia & Tech"
+      description: "Get in touch with MathxMedia & Tech software engineering and growth leads to discuss your custom project."
+    jaipur:
+      title: "Software Development Company in Jaipur"
+      description: "Custom software development, SaaS platform engineering, and AI automation for Jaipur businesses delivered by MathxMedia & Tech."
+    bhilwara:
+      title: "Software Development Company in Bhilwara"
+      description: "Headquarters operations for MathxMedia & Tech in Bhilwara providing custom software, textile ERP automation, and regional digital growth."
+    udaipur:
+      title: "Digital Marketing Agency in Udaipur"
+      description: "Digital marketing, local SEO, hospitality marketing, and web development for businesses and resorts in Udaipur."
 
 
 

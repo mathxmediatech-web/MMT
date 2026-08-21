@@ -31,8 +31,8 @@ export default function JsonLd({ type = "Organization", data = {} }) {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
 
-      name: "MMT (MATHXMEDIA&TECH)",
-      alternateName: ["MMT", "MATHXMEDIA&TECH"],
+      name: "MathxMedia & Tech",
+      alternateName: ["MMT"],
 
       url: `${SITE_URL}/`,
 
@@ -47,7 +47,7 @@ export default function JsonLd({ type = "Organization", data = {} }) {
 
       description:
         data.description ||
-        "MMT (MATHXMEDIA&TECH) provides software development, IT solutions, AI automation, SaaS products and digital marketing services for growing businesses.",
+        "MathxMedia & Tech builds custom software, SaaS platforms and AI automation systems, then helps businesses grow through SEO and performance marketing.",
 
       ...data,
     };
@@ -58,8 +58,7 @@ export default function JsonLd({ type = "Organization", data = {} }) {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
-
-      name: "MMT (MATHXMEDIA&TECH)",
+      name: "MathxMedia & Tech",
       url: `${SITE_URL}/`,
 
       publisher: {
